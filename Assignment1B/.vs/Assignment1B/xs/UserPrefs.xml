@@ -1,5 +1,10 @@
 ﻿<Properties StartupConfiguration="{FA8AF69B-99F8-4EFC-98A7-7D4132696F1D}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Computer.cs">
+    <Files>
+      <File FileName="ComputerMain.cs" Line="1" Column="1" />
+      <File FileName="Computer.cs" Line="13" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Assignment1B PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
