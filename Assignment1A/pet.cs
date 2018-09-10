@@ -4,13 +4,11 @@ namespace Assignment1A
 {
     class Pet
     {
-
         private String Name;
         private String TempAge;
         private Int32 Age;
         private String TempIsFemale;
         private Boolean IsFemale;
-
 
         public void AskTheUser()
         {
@@ -32,13 +30,10 @@ namespace Assignment1A
             {
                 IsFemale = false;
             }
-
-
         }
 
-        public void PresentTheUser()
+        public void PresentThePet()
         {
-
             Console.WriteLine("*****");
             Console.WriteLine("Name: " + Name);
             Console.WriteLine("Age: " + Age);
@@ -46,6 +41,5 @@ namespace Assignment1A
             Console.WriteLine("*****");
 
         }
-
     }
 }

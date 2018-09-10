@@ -2,11 +2,14 @@
 
 namespace Assignment1A
 {
-    class MainClass
+    class PetOwnerMain
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var pet = new Pet();
+
+            pet.AskTheUser();
+            pet.PresentThePet();
         }
     }
 }
