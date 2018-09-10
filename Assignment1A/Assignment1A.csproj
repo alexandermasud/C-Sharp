@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{79B64BFF-74DD-4786-87D9-56C39F152AFD}</ProjectGuid>
+    <ProjectGuid>{5C637272-1C0B-481D-8F6F-C628832F5E93}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Assignment1A</RootNamespace>
     <AssemblyName>Assignment1A</AssemblyName>
@@ -32,9 +32,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="pet.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="petownermain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

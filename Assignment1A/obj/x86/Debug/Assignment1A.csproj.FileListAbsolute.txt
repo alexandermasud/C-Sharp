@@ -1,6 +1,0 @@
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/obj/x86/Debug/Assignment1A.csprojAssemblyReference.cache
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/obj/x86/Debug/Assignment1A.csproj.CoreCompileInputs.cache
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/bin/Debug/Assignment1A.exe
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/bin/Debug/Assignment1A.pdb
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/obj/x86/Debug/Assignment1A.exe
-/Users/alex/Documents/GitHub/C-Sharp/Assignment1A/obj/x86/Debug/Assignment1A.pdb

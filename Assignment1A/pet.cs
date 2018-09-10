@@ -24,14 +24,16 @@ namespace Assignment1A
             Console.WriteLine("Är husdjuret en hona? ");
             TempIsFemale = Console.ReadLine().ToLower();
 
-            if (TempIsFemale == "y"){
+            if (TempIsFemale == "y")
+            {
                 IsFemale = true;
             }
-            else{
+            else
+            {
                 IsFemale = false;
             }
 
-            
+
         }
 
         public void PresentTheUser()
@@ -46,8 +48,4 @@ namespace Assignment1A
         }
 
     }
-
 }
-
-
-
