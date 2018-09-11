@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{FA8AF69B-99F8-4EFC-98A7-7D4132696F1D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Computer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ComputerMain.cs">
     <Files>
-      <File FileName="ComputerMain.cs" Line="1" Column="1" />
-      <File FileName="Computer.cs" Line="13" Column="36" />
+      <File FileName="ComputerMain.cs" Line="16" Column="1" />
+      <File FileName="Computer.cs" Line="43" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Assignment1B PreferredExecutionTarget="MonoDevelop.Default" />

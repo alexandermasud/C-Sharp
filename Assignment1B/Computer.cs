@@ -33,7 +33,7 @@ namespace Assignment1B
             Console.WriteLine("*****");
             Console.WriteLine("");
             Console.WriteLine("Brand: " + Brand);
-            Console.WriteLine("Screensize: " + ScreenSize);
+            Console.WriteLine("Screen size: " + ScreenSize);
             Console.WriteLine("Laptop: " + Laptop);
             Console.WriteLine("");
             Console.WriteLine("*****");
