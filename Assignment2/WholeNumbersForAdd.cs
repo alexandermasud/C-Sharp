@@ -8,10 +8,9 @@ namespace Assignment2
         {
 
             int AmountOfNumbers = ReadAmountOfNumbers();
-            List<int> Numbers = ReadNumbers(AmountOfNumbers);
-
-            Console.WriteLine(Numbers[0]);
-           
+            int Total = ReadNumbers(AmountOfNumbers);
+            DisplayTotal(Total);
+            return;
         }
 
         private int ReadAmountOfNumbers()
@@ -19,13 +18,11 @@ namespace Assignment2
 
             Console.WriteLine("Hur många nummer vill du ange?");
             string TempNum = Console.ReadLine();
-
             int Num = Int32.Parse(TempNum);
-
             return Num;
         }
 
-        private List<int> ReadNumbers(int AmountOfNumbers)
+        private int ReadNumbers(int AmountOfNumbers)
         {
 
             List<int> NumList = new List<int>();
@@ -35,12 +32,18 @@ namespace Assignment2
                 string TempAnswer = Console.ReadLine();
                 int Answer = Int32.Parse(TempAnswer);
                 NumList.Add(Answer);
-
             }
-           
-            return NumList;
+
+            int Total = 0;
+            for (int i = 0; i < NumList.Count; i++)
+            {
+                int TempNum  = NumList[i];
+                Total = Total + TempNum;
+            }
+            return Total;
         }
-
-
+        private void DisplayTotal(int Total){
+            Console.WriteLine(Total);
+        }
     }
 }
