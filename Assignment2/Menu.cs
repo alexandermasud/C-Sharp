@@ -24,10 +24,10 @@ namespace Assignment2
                     new WholeNumbersForAdd();
                     break;
                 case "2":
-                    Console.WriteLine("Case 2");
+                    new FloatingPointsNumberWhileAdd();
                     break;
                 case "3":
-                    Console.WriteLine("Case 3");
+                    new CurrencyConverter();
                     break;
                 case "4":
                     Console.WriteLine("Case 4");

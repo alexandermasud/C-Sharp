@@ -37,6 +37,7 @@
     <Compile Include="Menu.cs" />
     <Compile Include="WholeNumbersForAdd.cs" />
     <Compile Include="FloatingPointsNumberWhileAdd.cs" />
+    <Compile Include="CurrencyConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
