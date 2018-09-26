@@ -15,7 +15,7 @@ namespace Assignment2
 
         private int ReadAmountOfNumbers()
         {
-
+            // Anger hur många nummer som kommer att anges
             Console.WriteLine("Hur många nummer vill du ange?");
             string TempNum = Console.ReadLine();
             int Num = Int32.Parse(TempNum);
@@ -24,7 +24,7 @@ namespace Assignment2
 
         private int ReadNumbers(int AmountOfNumbers)
         {
-
+            // Anger numren samt summerar dessa
             List<int> NumList = new List<int>();
             for (int i = 0; i < AmountOfNumbers; i++)
             {
@@ -43,6 +43,7 @@ namespace Assignment2
             return Total;
         }
         private void DisplayTotal(int Total){
+            // Skriver ut summan av de angivna numrena
             Console.WriteLine(Total);
         }
     }

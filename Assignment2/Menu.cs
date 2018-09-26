@@ -7,7 +7,7 @@ namespace Assignment2
         { 
         }
 
-        public void Greet()
+        public void Start()
         {
            
 

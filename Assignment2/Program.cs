@@ -8,7 +8,7 @@ namespace Assignment2
         {
             Menu menu = new Menu();
 
-            menu.Greet();
+            menu.Start();
         }
     }
 }
