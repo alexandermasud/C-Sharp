@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{D5DD0875-362A-4D51-B4E2-71701391B9C5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WholeNumbersForAdd.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FloatingPointsNumberWhileAdd.cs">
     <Files>
-      <File FileName="Program.cs" Line="15" Column="1" />
-      <File FileName="Menu.cs" Line="13" Column="10" />
-      <File FileName="WholeNumbersForAdd.cs" Line="10" Column="9" />
+      <File FileName="Program.cs" Line="11" Column="23" />
+      <File FileName="Menu.cs" Line="27" Column="49" />
+      <File FileName="WholeNumbersForAdd.cs" Line="46" Column="55" />
+      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="9" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
