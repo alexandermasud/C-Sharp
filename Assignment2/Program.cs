@@ -6,7 +6,9 @@ namespace Assignment2
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu menu = new Menu();
+
+            menu.Greet();
         }
     }
 }
