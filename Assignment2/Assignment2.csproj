@@ -40,6 +40,7 @@
     <Compile Include="CurrencyConverter.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="TemperatureTable.cs" />
+    <Compile Include="WorkingSchedule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

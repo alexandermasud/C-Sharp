@@ -13,9 +13,7 @@ namespace Assignment2
             Console.WriteLine("Välj 1 för C till F");
             Console.WriteLine("Välj 2 för F till C");
 
-            string tempUserInput = Console.ReadLine();
-            int userInput;
-            int.TryParse(tempUserInput, out userInput);
+            int userInput = Input.ReadIntegerConsole();
 
             switch (userInput)
             {

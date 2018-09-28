@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{D5DD0875-362A-4D51-B4E2-71701391B9C5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WorkingSchedule.cs">
     <Files>
-      <File FileName="Program.cs" Line="9" Column="21" />
-      <File FileName="Menu.cs" Line="30" Column="27" />
-      <File FileName="WholeNumbersForAdd.cs" Line="28" Column="49" />
-      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="32" Column="1" />
-      <File FileName="CurrencyConverter.cs" Line="10" Column="9" />
-      <File FileName="Input.cs" Line="25" Column="10" />
-      <File FileName="TemperatureTable.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="9" Column="65" />
+      <File FileName="Menu.cs" Line="31" Column="44" />
+      <File FileName="WholeNumbersForAdd.cs" Line="44" Column="10" />
+      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="24" Column="34" />
+      <File FileName="CurrencyConverter.cs" Line="66" Column="35" />
+      <File FileName="Input.cs" Line="17" Column="30" />
+      <File FileName="TemperatureTable.cs" Line="21" Column="14" />
+      <File FileName="WorkingSchedule.cs" Line="10" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

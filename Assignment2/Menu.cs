@@ -31,7 +31,7 @@ namespace Assignment2
                     new TemperatureTable();
                     break;
                 case "5":
-                    Console.WriteLine("Case 5");
+                    new WorkingSchedule();
                     break;
                 case "0":
                     Console.WriteLine("Case 0");
