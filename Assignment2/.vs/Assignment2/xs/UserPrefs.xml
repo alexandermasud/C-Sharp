@@ -2,13 +2,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="WorkingSchedule.cs">
     <Files>
       <File FileName="Program.cs" Line="9" Column="65" />
-      <File FileName="Menu.cs" Line="31" Column="44" />
-      <File FileName="WholeNumbersForAdd.cs" Line="44" Column="10" />
-      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="24" Column="34" />
-      <File FileName="CurrencyConverter.cs" Line="66" Column="35" />
+      <File FileName="Menu.cs" Line="24" Column="27" />
+      <File FileName="WholeNumbersForAdd.cs" Line="31" Column="57" />
+      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="23" Column="30" />
+      <File FileName="CurrencyConverter.cs" Line="20" Column="25" />
       <File FileName="Input.cs" Line="17" Column="30" />
-      <File FileName="TemperatureTable.cs" Line="21" Column="14" />
-      <File FileName="WorkingSchedule.cs" Line="10" Column="9" />
+      <File FileName="TemperatureTable.cs" Line="10" Column="9" />
+      <File FileName="WorkingSchedule.cs" Line="36" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

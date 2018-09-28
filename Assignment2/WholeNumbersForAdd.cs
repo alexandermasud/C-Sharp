@@ -17,8 +17,7 @@ namespace Assignment2
         {
             // Anger hur många nummer som kommer att anges
             Console.WriteLine("Hur många nummer vill du ange?");
-            string tempNum = Console.ReadLine();
-            int num = Int32.Parse(tempNum);
+            int num = Input.ReadIntegerConsole();;
             return num;
         }
 
@@ -29,8 +28,7 @@ namespace Assignment2
             for (int i = 0; i < amountOfNumbers; i++)
             {
                 Console.WriteLine("Ange nummer " + i + " av " + amountOfNumbers);
-                string tempAnswer = Console.ReadLine();
-                int answer = Int32.Parse(tempAnswer);
+                int answer = Input.ReadIntegerConsole();
                 numList.Add(answer);
             }
 

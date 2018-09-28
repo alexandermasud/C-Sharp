@@ -20,10 +20,10 @@ namespace Assignment2
             switch (userInput)
             {
                 case 1:
-                    DisplayWeekends();
+                    DisplaySchedule(1);
                     break;
                 case 2:
-                    DisplayNights();
+                    DisplaySchedule(2);
                     break;
                 default:
                     Console.WriteLine("Invalid input");
@@ -31,23 +31,25 @@ namespace Assignment2
             }
         }
 
-        private void DisplayWeekends(){
+        private void DisplaySchedule(int type){
 
-            for (int i = 1; i < 53; i = i + 3)
+            // Beroende på helger 1 eller kvällar 2 loopas schemat igenom
+            int start;
+            int jump;
+
+            if(type == 1){
+                start = 1;
+                jump = 3;
+            }
+            else{
+                start = 6;
+                jump = 5;
+            }
+
+            for (int i = start; i < 53; i = i + jump)
             {
                 Console.WriteLine(i);
             }
         }
-
-        private void DisplayNights(){
-
-            for (int i = 6; i < 53; i = i + 5)
-            {
-                Console.WriteLine(i);
-            }
-        }
-        
-
-
     }
 }

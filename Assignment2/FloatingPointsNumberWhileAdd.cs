@@ -17,8 +17,7 @@ namespace Assignment2
             while (true)
             {
                 Console.WriteLine("Ange ett nummer till summan");
-                string tempNum = Console.ReadLine();
-                double num = Double.Parse(tempNum);
+                double num = Input.ReadDoubleConsole();
                 num = Math.Round(num, 2);
 
                 if (num == 0.00){

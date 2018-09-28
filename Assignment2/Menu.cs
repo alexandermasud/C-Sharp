@@ -12,28 +12,26 @@ namespace Assignment2
             // Användaren matar in siffra för att välja vilken funktion som ska köras
            
             Console.WriteLine("Ange 1-5 för att starta funktioner, 0 för avsluta");
-            string userInput = Console.ReadLine();
-
-
+            int userInput = Input.ReadIntegerConsole();
 
             switch (userInput)
             {
-                case "1":
+                case 1:
                     new WholeNumbersForAdd();
                     break;
-                case "2":
+                case 2:
                     new FloatingPointsNumberWhileAdd();
                     break;
-                case "3":
+                case 3:
                     new CurrencyConverter();
                     break;
-                case "4":
+                case 4:
                     new TemperatureTable();
                     break;
-                case "5":
+                case 5:
                     new WorkingSchedule();
                     break;
-                case "0":
+                case 0:
                     Console.WriteLine("Case 0");
                     break;
                 default:

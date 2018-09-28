@@ -5,7 +5,6 @@ namespace Assignment2
     {
         public TemperatureTable()
         {
-
             TemperatureMenu();
         }
 
@@ -19,12 +18,10 @@ namespace Assignment2
             {
                 case 1:
                     double resultC = ConvertToCelcius();
-                    Math.Round(resultC, 2);
                     DisplayResult(1, resultC);
                     break;
                 case 2:
                     double resultF = ConvertToFahrenheit();
-                    Math.Round(resultF, 2);
                     DisplayResult(2, resultF);
                     break;
                 default:
@@ -34,6 +31,8 @@ namespace Assignment2
         }
 
         private double ConvertToCelcius(){
+
+            // Konverterar input från Fahrenheit till Celcius
             Console.WriteLine("Ange grader i Fahrenheit");
 
             double userInput = Input.ReadDoubleConsole();
@@ -45,6 +44,7 @@ namespace Assignment2
 
         private double ConvertToFahrenheit(){
 
+            // Konverterar input från Celcius till Fahrenheit
             double userInput = Input.ReadDoubleConsole();
             double toFahrenheit = (9.0 / 5.0) * (userInput + 32.0);
             Math.Round(toFahrenheit, 2);
@@ -54,6 +54,7 @@ namespace Assignment2
 
         private void DisplayResult(int type, double result){
 
+            // Beroende på sluttyp så visas F eller C som enhet för temperaturen
             if(type == 1){
                 Console.WriteLine(Math.Round(result, 2) + "C");
             }

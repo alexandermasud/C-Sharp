@@ -20,8 +20,7 @@ namespace Assignment2
             while (true)
             {
                 Console.WriteLine("Ange ett nummer till summan");
-                string tempNum = Console.ReadLine();
-                double num = Double.Parse(tempNum);
+                double num = Input.ReadDoubleConsole();
 
 
                 if (num == 0.00)
@@ -47,8 +46,7 @@ namespace Assignment2
         {
             // Användaren anger valutans växelkurs
             Console.WriteLine("Ange växelkurs:");
-            string tempAnswer = Console.ReadLine();
-            double answer = Double.Parse(tempAnswer);
+            double answer = Input.ReadDoubleConsole();
             return answer;
         }
 
