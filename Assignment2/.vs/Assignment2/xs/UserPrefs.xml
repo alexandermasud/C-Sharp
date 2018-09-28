@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{D5DD0875-362A-4D51-B4E2-71701391B9C5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Menu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Input.cs">
     <Files>
       <File FileName="Program.cs" Line="11" Column="23" />
       <File FileName="Menu.cs" Line="30" Column="27" />
       <File FileName="WholeNumbersForAdd.cs" Line="28" Column="49" />
-      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="32" Column="44" />
+      <File FileName="FloatingPointsNumberWhileAdd.cs" Line="32" Column="1" />
       <File FileName="CurrencyConverter.cs" Line="10" Column="9" />
+      <File FileName="Input.cs" Line="10" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
