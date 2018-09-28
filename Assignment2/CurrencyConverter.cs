@@ -6,61 +6,65 @@ namespace Assignment2
         public CurrencyConverter()
         {
 
-            double Total = ReadNumbers();
-            string Currency = ReadCurrency();
-            double ExchangeRate = ReadExchangeRate();
-            double TotalSum = CalculationOfNumbers(Total, ExchangeRate);
-            DisplayTotal(Total, Currency, ExchangeRate, TotalSum);
+            double total = ReadNumbers();
+            string currency = ReadCurrency();
+            double exchangeRate = ReadExchangeRate();
+            double totalSum = CalculationOfNumbers(total, exchangeRate);
+            DisplayTotal(total, currency, exchangeRate, totalSum);
         }
 
         private double ReadNumbers()
         {
-            // Processas inputs och summerar dessa
-            double Total = 0;
+            // Processar inputs och summerar dessa
+            double total = 0;
             while (true)
             {
                 Console.WriteLine("Ange ett nummer till summan");
-                string TempNum = Console.ReadLine();
-                double Num = Double.Parse(TempNum);
+                string tempNum = Console.ReadLine();
+                double num = Double.Parse(tempNum);
 
 
-                if (Num == 0.00)
+                if (num == 0.00)
                 {
-                    return Total;
+                    return total;
                 }
                 else
                 {
-                    Total = Total + Num;
+                    total = total + num;
                 }
             }
         }
         private string ReadCurrency()
+
         {
+            // Användaren anger valutans namn 
             Console.WriteLine("Ange valuta:");
-            string Answer = Console.ReadLine();
-            return Answer;
+            string answer = Console.ReadLine();
+            return answer;
         }
 
         private double ReadExchangeRate()
         {
+            // Användaren anger valutans växelkurs
             Console.WriteLine("Ange växelkurs:");
-            string TempAnswer = Console.ReadLine();
-            double Answer = Double.Parse(TempAnswer);
-            return Answer;
+            string tempAnswer = Console.ReadLine();
+            double answer = Double.Parse(tempAnswer);
+            return answer;
         }
 
-        private double CalculationOfNumbers(double Total, double ExchangeRate){
+        private double CalculationOfNumbers(double total, double exchangeRate){
 
-            double TotalSum = Total / ExchangeRate;
-            TotalSum = Math.Round(TotalSum, 2);
-            return TotalSum;
+            // Valutan omvandlas enligt växelkurs samt avrundas
+            double totalSum = total / exchangeRate;
+            totalSum = Math.Round(totalSum, 2);
+            return totalSum;
         }
-        private void DisplayTotal(double Total, string Currency, double ExchangeRate, double TotalSum)
+        private void DisplayTotal(double total, string currency, double exchangeRate, double totalSum)
         {
             // Skriver ut den totala summan
-            Console.WriteLine("Att växla " + Total + " SEK");
+            Console.WriteLine("Att växla " + total + " SEK");
             Console.WriteLine("");
-            Console.WriteLine(Total + " SEK blir " + TotalSum + " " + Currency + " med en växelkurs av " + ExchangeRate + " SEK/" + Currency);
+            Console.WriteLine(total + " SEK blir " + totalSum + " " + currency + " med en växelkurs av " + exchangeRate + " SEK/" + currency);
         }
     }
 }

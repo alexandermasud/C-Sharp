@@ -6,33 +6,33 @@ namespace Assignment2
     {
         public FloatingPointsNumberWhileAdd()
         {
-            double Total = ReadNumbers();
-            DisplayTotal(Total);
+            double total = ReadNumbers();
+            DisplayTotal(total);
             return;
         }
 
         private double ReadNumbers(){
-            // Processas inputs och summerar dessa
-            double Total = 0;
+            // Processar inputs och summerar talen
+            double total = 0;
             while (true)
             {
                 Console.WriteLine("Ange ett nummer till summan");
-                string TempNum = Console.ReadLine();
-                double Num = Double.Parse(TempNum);
-                Num = Math.Round(Num, 2);
+                string tempNum = Console.ReadLine();
+                double num = Double.Parse(tempNum);
+                num = Math.Round(num, 2);
 
-                if (Num == 0.00){
-                    return Total;
+                if (num == 0.00){
+                    return total;
                 }
                 else{   
-                    Total = Total + Num;
+                    total = total + num;
                 }
             }
         }
 
-        private void DisplayTotal(double Total){
+        private void DisplayTotal(double total){
             // Skriver ut den totala summan
-            Console.WriteLine("TOTAL: " + Total);
+            Console.WriteLine("TOTAL: " + total);
         }
     }
 }

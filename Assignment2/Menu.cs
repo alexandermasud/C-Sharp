@@ -9,16 +9,14 @@ namespace Assignment2
 
         public void Start()
         {
-           
-
-          
+            // Användaren matar in siffra för att välja vilken funktion som ska köras
            
             Console.WriteLine("Ange 1-5 för att starta funktioner, 0 för avsluta");
-            string UserInput = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
 
 
-            switch (UserInput)
+            switch (userInput)
             {
                 case "1":
                     new WholeNumbersForAdd();
@@ -30,7 +28,7 @@ namespace Assignment2
                     new CurrencyConverter();
                     break;
                 case "4":
-                    Console.WriteLine("Case 4");
+                    new TemperatureTable();
                     break;
                 case "5":
                     Console.WriteLine("Case 5");

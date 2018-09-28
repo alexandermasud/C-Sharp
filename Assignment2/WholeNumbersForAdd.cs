@@ -7,9 +7,9 @@ namespace Assignment2
         public WholeNumbersForAdd()
         {
 
-            int AmountOfNumbers = ReadAmountOfNumbers();
-            int Total = ReadNumbers(AmountOfNumbers);
-            DisplayTotal(Total);
+            int amountOfNumbers = ReadAmountOfNumbers();
+            int total = ReadNumbers(amountOfNumbers);
+            DisplayTotal(total);
             return;
         }
 
@@ -17,34 +17,34 @@ namespace Assignment2
         {
             // Anger hur många nummer som kommer att anges
             Console.WriteLine("Hur många nummer vill du ange?");
-            string TempNum = Console.ReadLine();
-            int Num = Int32.Parse(TempNum);
-            return Num;
+            string tempNum = Console.ReadLine();
+            int num = Int32.Parse(tempNum);
+            return num;
         }
 
-        private int ReadNumbers(int AmountOfNumbers)
+        private int ReadNumbers(int amountOfNumbers)
         {
             // Anger numren samt summerar dessa
-            List<int> NumList = new List<int>();
-            for (int i = 0; i < AmountOfNumbers; i++)
+            List<int> numList = new List<int>();
+            for (int i = 0; i < amountOfNumbers; i++)
             {
-                Console.WriteLine("Ange nummer " + i + " av " + AmountOfNumbers);
-                string TempAnswer = Console.ReadLine();
-                int Answer = Int32.Parse(TempAnswer);
-                NumList.Add(Answer);
+                Console.WriteLine("Ange nummer " + i + " av " + amountOfNumbers);
+                string tempAnswer = Console.ReadLine();
+                int answer = Int32.Parse(tempAnswer);
+                numList.Add(answer);
             }
 
-            int Total = 0;
-            for (int i = 0; i < NumList.Count; i++)
+            int total = 0;
+            for (int i = 0; i < numList.Count; i++)
             {
-                int TempNum  = NumList[i];
-                Total = Total + TempNum;
+                int tempNum  = numList[i];
+                total = total + tempNum;
             }
-            return Total;
+            return total;
         }
-        private void DisplayTotal(int Total){
+        private void DisplayTotal(int total){
             // Skriver ut summan av de angivna numrena
-            Console.WriteLine(Total);
+            Console.WriteLine(total);
         }
     }
 }
