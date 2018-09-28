@@ -41,6 +41,7 @@
     <Compile Include="Input.cs" />
     <Compile Include="TemperatureTable.cs" />
     <Compile Include="WorkingSchedule.cs" />
+    <Compile Include="Graphics.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

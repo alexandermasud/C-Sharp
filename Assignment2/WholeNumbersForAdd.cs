@@ -7,16 +7,29 @@ namespace Assignment2
         public WholeNumbersForAdd()
         {
 
+            DisplayMenu();
             int amountOfNumbers = ReadAmountOfNumbers();
             int total = ReadNumbers(amountOfNumbers);
             DisplayTotal(total);
             return;
         }
 
+        private void DisplayMenu(){
+
+            int asterisk = Graphics.AmountOfAsterisk();
+
+
+            Console.WriteLine(new string('*',asterisk) + " Summation of whole numbers " + new string('*', asterisk));
+            Console.WriteLine(new string(' ', asterisk*2) + "using a for statemen");
+            Graphics.EmptyRow();
+            Graphics.RowOfDashes();
+
+        }
+
         private int ReadAmountOfNumbers()
         {
             // Anger hur många nummer som kommer att anges
-            Console.WriteLine("Hur många nummer vill du ange?");
+            Console.Write("Number of whole numbers to add?");
             int num = Input.ReadIntegerConsole();;
             return num;
         }
@@ -27,7 +40,7 @@ namespace Assignment2
             List<int> numList = new List<int>();
             for (int i = 0; i < amountOfNumbers; i++)
             {
-                Console.WriteLine("Ange nummer " + i + " av " + amountOfNumbers);
+                Console.WriteLine("Please give the value number no " + (i+1) + " (whole number): ");
                 int answer = Input.ReadIntegerConsole();
                 numList.Add(answer);
             }
