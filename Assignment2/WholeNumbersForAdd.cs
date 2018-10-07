@@ -29,8 +29,9 @@ namespace Assignment2
         private int ReadAmountOfNumbers()
         {
             // Anger hur många nummer som kommer att anges
+
             Console.Write("Number of whole numbers to add?");
-            int num = Input.ReadIntegerConsole();;
+            int num = Input.ReadIntegerConsole();
             return num;
         }
 
@@ -40,7 +41,7 @@ namespace Assignment2
             List<int> numList = new List<int>();
             for (int i = 0; i < amountOfNumbers; i++)
             {
-                Console.WriteLine("Please give the value number no " + (i+1) + " (whole number): ");
+                Console.Write("Please give the value number no " + (i+1) + " (whole number): ");
                 int answer = Input.ReadIntegerConsole();
                 numList.Add(answer);
             }

@@ -4,8 +4,8 @@
       <File FileName="Program.cs" Line="9" Column="65" />
       <File FileName="Graphics.cs" Line="23" Column="36" />
       <File FileName="Menu.cs" Line="17" Column="46" />
-      <File FileName="WholeNumbersForAdd.cs" Line="34" Column="24" />
-      <File FileName="Input.cs" Line="18" Column="13" />
+      <File FileName="WholeNumbersForAdd.cs" Line="42" Column="40" />
+      <File FileName="Input.cs" Line="17" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
