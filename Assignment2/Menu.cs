@@ -11,6 +11,10 @@ namespace Assignment2
         {
             // Användaren matar in siffra för att välja vilken funktion som ska köras
 
+            bool loopContinue = true;
+            while (loopContinue)
+            {
+
             int rowOfDashes = Graphics.RowOfDashes();
             int marginLeft = Graphics.MarginLeft();
             Console.WriteLine(new string('-', rowOfDashes));
@@ -27,29 +31,52 @@ namespace Assignment2
             Console.Write("Your choice: ");
             int userInput = Input.ReadIntegerConsole();
 
-            switch (userInput)
-            {
-                case 1:
-                    new WholeNumbersForAdd();
-                    break;
-                case 2:
-                    new FloatingPointsNumberWhileAdd();
-                    break;
-                case 3:
-                    new CurrencyConverter();
-                    break;
-                case 4:
-                    new WorkingSchedule();
-                    break;
-                case 5:
-                    new TemperatureTable();
-                    break;
-                case 0:
-                    Console.WriteLine("Case 0");
-                    break;
-                default:
-                    Console.WriteLine("Invalid input");
-                    break;
+            bool closeApp = false;
+
+                switch (userInput)
+                {
+                    case 1:
+                        new WholeNumbersForAdd();
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 2:
+                        new FloatingPointsNumberWhileAdd();
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 3:
+                        new CurrencyConverter();
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 4:
+                        new WorkingSchedule();
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 5:
+                        new TemperatureTable();
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 0:
+                        loopContinue = false;
+                        System.Environment.Exit(1);
+                        break;
+
+                    default:
+                        closeApp = true;
+                        break;
+
+                }
+                if (loopContinue)
+                {
+                    if(closeApp != false){
+                        Console.WriteLine("Invalid input");
+                    }
+
+                }
             }
         }
     }

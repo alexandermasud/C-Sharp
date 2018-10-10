@@ -5,29 +5,59 @@ namespace Assignment2
     {
         public WorkingSchedule()
         {
-
-            WorkingMenu();
+            int rowOfDashes = Graphics.RowOfDashes();
+            DisplayMenu(rowOfDashes);
         }
 
-        private void WorkingMenu(){
+        private void DisplayMenu(int rowOfDashes){
 
-            Console.WriteLine("Tryck 1 för helger");
-            Console.WriteLine("Tryck 2 för kvällar");
-            Console.WriteLine("Tryck 0 för att avsluta");
-
-            int userInput = Input.ReadIntegerConsole();
-
-            switch (userInput)
+            bool loopContinue = true;
+            while (loopContinue)
             {
-                case 1:
-                    DisplaySchedule(1);
-                    break;
-                case 2:
-                    DisplaySchedule(2);
-                    break;
-                default:
-                    Console.WriteLine("Invalid input");
-                    break;
+
+
+
+                Console.WriteLine(new string('-', rowOfDashes));
+                Console.WriteLine(new string(' ', 10) + "YOUR SCHEDULE PROGRAM");
+                Console.WriteLine("Select from the menu which type of schedule you want to see.");
+                Console.WriteLine(new string('-', rowOfDashes));
+                Graphics.EmptyRow();
+                Console.WriteLine("1 Show a list of the weekends to work.");
+                Console.WriteLine("2 Show a list of the nights to work.");
+                Console.WriteLine("0 Return to the Main Menu.");
+                Graphics.EmptyRow();
+
+                Console.Write("Your choice: ");
+                int userInput = Input.ReadIntegerConsole();
+                bool closeApp = false;
+
+                switch (userInput)
+                {
+                    case 1:
+                        DisplaySchedule(1);
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 2:
+                        DisplaySchedule(2);
+                        loopContinue = true;
+                        closeApp = false;
+                        break;
+                    case 0:
+                        loopContinue = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input");
+                        break;
+                }
+                if (loopContinue)
+                {
+                    if (closeApp != false)
+                    {
+                        Console.WriteLine("Invalid input");
+                    }
+
+                }
             }
         }
 
@@ -46,10 +76,14 @@ namespace Assignment2
                 jump = 5;
             }
 
+
+
             for (int i = start; i < 53; i = i + jump)
             {
-                Console.WriteLine(i);
+                Console.WriteLine("            Week " + i);
             }
         }
     }
 }
+
+
