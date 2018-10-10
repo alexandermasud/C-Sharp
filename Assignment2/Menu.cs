@@ -39,10 +39,10 @@ namespace Assignment2
                     new CurrencyConverter();
                     break;
                 case 4:
-                    new TemperatureTable();
+                    new WorkingSchedule();
                     break;
                 case 5:
-                    new WorkingSchedule();
+                    new TemperatureTable();
                     break;
                 case 0:
                     Console.WriteLine("Case 0");

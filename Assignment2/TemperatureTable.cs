@@ -10,18 +10,28 @@ namespace Assignment2
 
         private void TemperatureMenu(){
             Console.WriteLine("Välj 1 för C till F");
-            Console.WriteLine("Välj 2 för F till C");
+            Console.WriteLine("Välj 1 för F till C");
+            Console.WriteLine("Välj 3 för C till F med egen inmatning");
+            Console.WriteLine("Välj 4 för F till C med egen inmatning");
 
             int userInput = Input.ReadIntegerConsole();
 
             switch (userInput)
             {
                 case 1:
-                    double resultC = ConvertToCelcius();
-                    DisplayResult(1, resultC);
+                    ConvertToCelcius();
+
                     break;
                 case 2:
-                    double resultF = ConvertToFahrenheit();
+                    ConvertToFahrenheit();
+
+                    break;
+                case 3:
+                    double resultC = ConvertToCelcius2();
+                    DisplayResult(1, resultC);
+                    break;
+                case 4:
+                    double resultF = ConvertToFahrenheit2();
                     DisplayResult(2, resultF);
                     break;
                 default:
@@ -30,7 +40,25 @@ namespace Assignment2
             }
         }
 
-        private double ConvertToCelcius(){
+       private void ConvertToCelcius(){
+
+            for (double i = 0; i < 101; i = i + 4)
+            {
+                double toCelcius = (5.0 / 9.0) * (i - 32.0);
+                Console.WriteLine("      " + i + "     " + Math.Round(toCelcius, 2));
+            }
+        }
+
+        private void ConvertToFahrenheit()
+        {
+            for (double i = 0; i < 101; i = i + 4)
+            {
+                double toFahrenheit = (9.0 / 5.0) * (i + 32.0);
+                Console.WriteLine("      " + i + "     " + Math.Round(toFahrenheit, 2));
+            }
+        }
+
+        private double ConvertToCelcius2(){
 
             // Konverterar input från Fahrenheit till Celcius
             Console.WriteLine("Ange grader i Fahrenheit");
@@ -42,7 +70,7 @@ namespace Assignment2
 
         }
 
-        private double ConvertToFahrenheit(){
+        private double ConvertToFahrenheit2(){
 
             // Konverterar input från Celcius till Fahrenheit
             double userInput = Input.ReadDoubleConsole();

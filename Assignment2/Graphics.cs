@@ -12,16 +12,23 @@ namespace Assignment2
             return 50;
         }
 
+            // Används för att skapa marginal till vänster för menyer
         public static int MarginLeft(){
             return 5;
         }
 
+            // Anger hur många asterisker som ska användas i menyer
         public static int AmountOfAsterisk(){
             return 4;
         }
 
+            // Används för att ska en tom rad
         public static void EmptyRow(){
             Console.WriteLine("");
+        }
+
+        public static int AmountOfStars(){
+            return 4;
         }
     }
 }
