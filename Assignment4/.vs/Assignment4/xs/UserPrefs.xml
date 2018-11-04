@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.Assignment4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Party.cs">
     <Files>
-      <File FileName="MainForm.cs" Line="41" Column="22" />
-      <File FileName="Party.cs" Line="16" Column="41" />
+      <File FileName="MainForm.cs" Line="174" Column="56" />
+      <File FileName="Party.cs" Line="149" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

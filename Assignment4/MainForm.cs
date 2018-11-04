@@ -38,6 +38,7 @@ namespace Assignment4
 
         }
 
+        // Creates an array with max amount of users
         private bool CreateParty()
         {
             int maxNumber = 0;
@@ -56,6 +57,7 @@ namespace Assignment4
             return ok;
         }
 
+        // Get cost per person
         private bool ReadCostPerPerson()
         {
             double amount = 0.0;
@@ -73,6 +75,7 @@ namespace Assignment4
             return ok;
         }
 
+        // Creates party when "Create List" is clicked, checks if inputs are valid ie more than 0
         private void btnCreateList_Click(object sender, EventArgs e)
         {
 
@@ -91,7 +94,7 @@ namespace Assignment4
             }
         }
 
-        // Add button
+        // Adds person to party, "add" button
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (TrimNames())
@@ -106,6 +109,7 @@ namespace Assignment4
                 UpdateGUI();
         }
 
+        // Updates the GUI after changes to the array
         private void UpdateGUI()
         {
             listBox.Items.Clear();
@@ -130,6 +134,7 @@ namespace Assignment4
 
         }
 
+        // Validates inputs, First and Lastname may not be empty
         private bool ValidateText(string text)
         {
             text = text.Trim();
@@ -142,21 +147,7 @@ namespace Assignment4
             return true;
         }
 
-        private void btnListBoxChange_Click(object sender, EventArgs e)
-        {
-            int index = IsListBoxItemSelected();
-
-            if (index < 0)
-                return;
-
-            if (TrimNames())
-            {
-                party.ChangeAt(index, txtFirstName.Text, txtLastName.Text);
-                UpdateGUI();
-            }
-
-        }
-
+        // Validates input text
         private bool TrimNames()
         {
             if ((!ValidateText(txtFirstName.Text)) || (!ValidateText(txtLastName.Text)))
@@ -167,11 +158,7 @@ namespace Assignment4
             return true;
         }
 
-        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Deletes a person, checkes who is selected, deletes and updates GUI
         private void btnListBoxDelete_Click(object sender, EventArgs e)
         {
             int index = IsListBoxItemSelected();
@@ -184,13 +171,14 @@ namespace Assignment4
             UpdateGUI();
         }
 
+        // Checks if an actual person has been selected
         private int IsListBoxItemSelected()
         {
             int index = listBox.SelectedIndex;
 
             if (listBox.SelectedIndex < 0)
             {
-                MessageBox.Show("Select and item in the list");
+                MessageBox.Show("Select an item in the list");
                 return -1;
             }
             return index;
