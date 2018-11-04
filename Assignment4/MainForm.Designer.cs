@@ -35,6 +35,7 @@
             this.lblAmount = new System.Windows.Forms.Label();
             this.lblMaxNum = new System.Windows.Forms.Label();
             this.grpInviteGuest = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -73,6 +74,7 @@
             this.btnCreateList.TabIndex = 4;
             this.btnCreateList.Text = "Create List";
             this.btnCreateList.UseVisualStyleBackColor = true;
+            this.btnCreateList.Click += new System.EventHandler(this.btnCreateList_Click);
             // 
             // txtAmount
             // 
@@ -108,6 +110,7 @@
             // 
             // grpInviteGuest
             // 
+            this.grpInviteGuest.Controls.Add(this.btnAdd);
             this.grpInviteGuest.Controls.Add(this.txtLastName);
             this.grpInviteGuest.Controls.Add(this.txtFirstName);
             this.grpInviteGuest.Controls.Add(this.lblLastName);
@@ -118,6 +121,16 @@
             this.grpInviteGuest.TabIndex = 1;
             this.grpInviteGuest.TabStop = false;
             this.grpInviteGuest.Text = "Invite Guest";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(136, 98);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtLastName
             // 
@@ -194,6 +207,7 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(286, 277);
             this.listBox.TabIndex = 4;
+            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // lblGuestList
             // 
@@ -210,8 +224,9 @@
             this.btnListBoxChange.Name = "btnListBoxChange";
             this.btnListBoxChange.Size = new System.Drawing.Size(75, 23);
             this.btnListBoxChange.TabIndex = 6;
-            this.btnListBoxChange.Text = "button1";
+            this.btnListBoxChange.Text = "Change";
             this.btnListBoxChange.UseVisualStyleBackColor = true;
+            this.btnListBoxChange.Click += new System.EventHandler(this.btnListBoxChange_Click);
             // 
             // btnListBoxDelete
             // 
@@ -219,8 +234,9 @@
             this.btnListBoxDelete.Name = "btnListBoxDelete";
             this.btnListBoxDelete.Size = new System.Drawing.Size(75, 23);
             this.btnListBoxDelete.TabIndex = 6;
-            this.btnListBoxDelete.Text = "button1";
+            this.btnListBoxDelete.Text = "Delete";
             this.btnListBoxDelete.UseVisualStyleBackColor = true;
+            this.btnListBoxDelete.Click += new System.EventHandler(this.btnListBoxDelete_Click);
             // 
             // MainForm
             // 
@@ -269,6 +285,7 @@
         private System.Windows.Forms.Label lblGuestList;
         private System.Windows.Forms.Button btnListBoxChange;
         private System.Windows.Forms.Button btnListBoxDelete;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 

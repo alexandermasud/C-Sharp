@@ -44,9 +44,8 @@ namespace Assignment4
             else
             {
                 ok = false;
-
-                return ok;
             }
+            return ok;
         }
 
         private string FullName(string firstName, string lastName)
@@ -66,6 +65,7 @@ namespace Assignment4
                     break;
                 }
             }
+            return vacantPos;
         }
 
         private int NumOfGuests()
@@ -79,6 +79,7 @@ namespace Assignment4
                     numGuests++;
                 }
             }
+            return numGuests;
         }
 
         public int Count
