@@ -206,7 +206,6 @@
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(286, 277);
             this.listBox.TabIndex = 4;
-            this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // lblGuestList
             // 
