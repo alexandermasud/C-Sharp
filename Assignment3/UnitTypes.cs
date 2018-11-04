@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment3
 {
-    class UnitTypes
+    enum UnitTypes
     {
         Metric,
         American

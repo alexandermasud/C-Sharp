@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblHeight = new System.Windows.Forms.Label();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.lblWeight = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.rbtnUsUnit = new System.Windows.Forms.RadioButton();
+            this.rbtnMetric = new System.Windows.Forms.RadioButton();
+            this.btnCalculateBMI = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblResultWeightCategory = new System.Windows.Forms.Label();
+            this.lblResultsYourBmi = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -58,50 +58,50 @@
             this.label1.Text = "Your Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(117, 39);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(384, 20);
+            this.txtName.TabIndex = 1;
             // 
-            // label2
+            // lblHeight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Height (cm)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(30, 85);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(61, 13);
+            this.lblHeight.TabIndex = 2;
+            this.lblHeight.Text = "Height (cm)";
+            this.lblHeight.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtHeight
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(60, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtHeight.Location = new System.Drawing.Point(117, 82);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(60, 20);
+            this.txtHeight.TabIndex = 3;
             // 
-            // textBox3
+            // txtWeight
             // 
-            this.textBox3.Location = new System.Drawing.Point(117, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(60, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtWeight.Location = new System.Drawing.Point(117, 109);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(60, 20);
+            this.txtWeight.TabIndex = 4;
             // 
-            // label3
+            // lblWeight
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Weight (kg)";
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Location = new System.Drawing.Point(30, 112);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(62, 13);
+            this.lblWeight.TabIndex = 5;
+            this.lblWeight.Text = "Weight (kg)";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbtnUsUnit);
+            this.groupBox1.Controls.Add(this.rbtnMetric);
             this.groupBox1.Location = new System.Drawing.Point(301, 85);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 76);
@@ -110,41 +110,42 @@
             this.groupBox1.Text = "Unit";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton2
+            // rbtnUsUnit
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(108, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "US Unit (foot, ibs)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnUsUnit.AutoSize = true;
+            this.rbtnUsUnit.Location = new System.Drawing.Point(6, 43);
+            this.rbtnUsUnit.Name = "rbtnUsUnit";
+            this.rbtnUsUnit.Size = new System.Drawing.Size(108, 17);
+            this.rbtnUsUnit.TabIndex = 1;
+            this.rbtnUsUnit.TabStop = true;
+            this.rbtnUsUnit.Text = "US Unit (foot, ibs)";
+            this.rbtnUsUnit.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtnMetric
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Matric Unit (kg cm)";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnMetric.AutoSize = true;
+            this.rbtnMetric.Location = new System.Drawing.Point(7, 20);
+            this.rbtnMetric.Name = "rbtnMetric";
+            this.rbtnMetric.Size = new System.Drawing.Size(114, 17);
+            this.rbtnMetric.TabIndex = 0;
+            this.rbtnMetric.TabStop = true;
+            this.rbtnMetric.Text = "Matric Unit (kg cm)";
+            this.rbtnMetric.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCalculateBMI
             // 
-            this.button1.Location = new System.Drawing.Point(212, 186);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 45);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCalculateBMI.Location = new System.Drawing.Point(212, 186);
+            this.btnCalculateBMI.Name = "btnCalculateBMI";
+            this.btnCalculateBMI.Size = new System.Drawing.Size(181, 45);
+            this.btnCalculateBMI.TabIndex = 7;
+            this.btnCalculateBMI.Text = "Calculate";
+            this.btnCalculateBMI.UseVisualStyleBackColor = true;
+            this.btnCalculateBMI.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.lblResultWeightCategory);
+            this.groupBox2.Controls.Add(this.lblResultsYourBmi);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(33, 263);
@@ -154,23 +155,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results for";
             // 
-            // label7
+            // lblResultWeightCategory
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(384, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "label7";
+            this.lblResultWeightCategory.AutoSize = true;
+            this.lblResultWeightCategory.Location = new System.Drawing.Point(384, 66);
+            this.lblResultWeightCategory.Name = "lblResultWeightCategory";
+            this.lblResultWeightCategory.Size = new System.Drawing.Size(35, 13);
+            this.lblResultWeightCategory.TabIndex = 3;
+            this.lblResultWeightCategory.Text = "label7";
             // 
-            // label6
+            // lblResultsYourBmi
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(384, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "label6";
+            this.lblResultsYourBmi.AutoSize = true;
+            this.lblResultsYourBmi.Location = new System.Drawing.Point(384, 25);
+            this.lblResultsYourBmi.Name = "lblResultsYourBmi";
+            this.lblResultsYourBmi.Size = new System.Drawing.Size(35, 13);
+            this.lblResultsYourBmi.TabIndex = 2;
+            this.lblResultsYourBmi.Text = "label6";
+            this.lblResultsYourBmi.Click += new System.EventHandler(this.lblResultsYourBmi_Click);
             // 
             // label5
             // 
@@ -200,13 +202,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 388);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCalculateBMI);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblWeight);
+            this.Controls.Add(this.txtWeight);
+            this.Controls.Add(this.txtHeight);
+            this.Controls.Add(this.lblHeight);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Form1";
@@ -222,18 +224,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblHeight;
+        private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rbtnUsUnit;
+        private System.Windows.Forms.RadioButton rbtnMetric;
+        private System.Windows.Forms.Button btnCalculateBMI;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblResultWeightCategory;
+        private System.Windows.Forms.Label lblResultsYourBmi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
