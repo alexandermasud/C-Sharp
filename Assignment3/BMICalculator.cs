@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignment3
+﻿namespace Assignment3
 {
     class BMICalculator
     {
-
+        // Sets object variables
         private string name = "No Name";
         private double height = 0;
         private double weight = 0;
@@ -45,14 +39,14 @@ namespace Assignment3
                 weight = value;
         }
 
-        // Sets unitTypes
+        // Sets unitType
         public void SetUnit(UnitTypes value)
         {
             unit = value;
 
         }
 
-        // Gets unitTypes
+        // Gets unitType
         public UnitTypes GetUnit()
         {
             return unit;
@@ -78,8 +72,5 @@ namespace Assignment3
 
             return bmiValue;
         }
-
-
-
     }
 }

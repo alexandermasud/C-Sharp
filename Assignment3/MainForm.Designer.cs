@@ -54,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Your Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtName
             // 
@@ -71,7 +70,6 @@
             this.lblHeight.Size = new System.Drawing.Size(61, 13);
             this.lblHeight.TabIndex = 2;
             this.lblHeight.Text = "Height (cm)";
-            this.lblHeight.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtHeight
             // 
@@ -106,12 +104,11 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Unit";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rbtnUsUnit
             // 
             this.rbtnUsUnit.AutoSize = true;
-            this.rbtnUsUnit.Location = new System.Drawing.Point(6, 43);
+            this.rbtnUsUnit.Location = new System.Drawing.Point(7, 43);
             this.rbtnUsUnit.Name = "rbtnUsUnit";
             this.rbtnUsUnit.Size = new System.Drawing.Size(108, 17);
             this.rbtnUsUnit.TabIndex = 1;
@@ -123,7 +120,7 @@
             // rbtnMetric
             // 
             this.rbtnMetric.AutoSize = true;
-            this.rbtnMetric.Location = new System.Drawing.Point(7, 20);
+            this.rbtnMetric.Location = new System.Drawing.Point(7, 19);
             this.rbtnMetric.Name = "rbtnMetric";
             this.rbtnMetric.Size = new System.Drawing.Size(114, 17);
             this.rbtnMetric.TabIndex = 0;
@@ -134,7 +131,7 @@
             // 
             // btnCalculateBMI
             // 
-            this.btnCalculateBMI.Location = new System.Drawing.Point(212, 186);
+            this.btnCalculateBMI.Location = new System.Drawing.Point(190, 212);
             this.btnCalculateBMI.Name = "btnCalculateBMI";
             this.btnCalculateBMI.Size = new System.Drawing.Size(181, 45);
             this.btnCalculateBMI.TabIndex = 7;
@@ -160,7 +157,6 @@
             this.lblResultsYourBmi.Size = new System.Drawing.Size(35, 13);
             this.lblResultsYourBmi.TabIndex = 2;
             this.lblResultsYourBmi.Text = "label6";
-            this.lblResultsYourBmi.Click += new System.EventHandler(this.lblResultsYourBmi_Click);
             // 
             // label4
             // 
