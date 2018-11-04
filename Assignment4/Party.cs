@@ -114,6 +114,39 @@ namespace Assignment4
             return (index >= 0) && (index < guestList.Length);
         }
 
+        public string GetItemAt (int index){
+            if (CheckIndex (index)){
+                return guestList[index];;
+            }
+
+            return null;
+        }
+
+        public bool DeleteAt (int index){
+
+            if(CheckIndex (index)){
+
+                guestList[index] = string.Empty;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        public bool ChangeAt(int index, string firstName, string lastName){
+
+            bool ok = false;
+
+            if(CheckIndex (index)){
+                guestList[index] = FullName(firstName, lastName);
+            }
+            else{
+                ok = true;
+            }
+            return ok;
+        }
+
 
     }
 }
