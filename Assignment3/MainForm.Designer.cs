@@ -38,14 +38,12 @@
             this.rbtnUsUnit = new System.Windows.Forms.RadioButton();
             this.rbtnMetric = new System.Windows.Forms.RadioButton();
             this.btnCalculateBMI = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblResultWeightCategory = new System.Windows.Forms.Label();
+            this.grpResults = new System.Windows.Forms.GroupBox();
             this.lblResultsYourBmi = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grpResults.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +118,7 @@
             this.rbtnUsUnit.TabStop = true;
             this.rbtnUsUnit.Text = "US Unit (foot, ibs)";
             this.rbtnUsUnit.UseVisualStyleBackColor = true;
+            this.rbtnUsUnit.CheckedChanged += new System.EventHandler(this.rbtnUsUnit_CheckedChanged);
             // 
             // rbtnMetric
             // 
@@ -129,8 +128,9 @@
             this.rbtnMetric.Size = new System.Drawing.Size(114, 17);
             this.rbtnMetric.TabIndex = 0;
             this.rbtnMetric.TabStop = true;
-            this.rbtnMetric.Text = "Matric Unit (kg cm)";
+            this.rbtnMetric.Text = "Metric Unit (kg cm)";
             this.rbtnMetric.UseVisualStyleBackColor = true;
+            this.rbtnMetric.CheckedChanged += new System.EventHandler(this.rbtnMetric_CheckedChanged);
             // 
             // btnCalculateBMI
             // 
@@ -142,27 +142,15 @@
             this.btnCalculateBMI.UseVisualStyleBackColor = true;
             this.btnCalculateBMI.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox2
+            // grpResults
             // 
-            this.groupBox2.Controls.Add(this.lblResultWeightCategory);
-            this.groupBox2.Controls.Add(this.lblResultsYourBmi);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(33, 263);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(468, 100);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Results for";
-            // 
-            // lblResultWeightCategory
-            // 
-            this.lblResultWeightCategory.AutoSize = true;
-            this.lblResultWeightCategory.Location = new System.Drawing.Point(384, 66);
-            this.lblResultWeightCategory.Name = "lblResultWeightCategory";
-            this.lblResultWeightCategory.Size = new System.Drawing.Size(35, 13);
-            this.lblResultWeightCategory.TabIndex = 3;
-            this.lblResultWeightCategory.Text = "label7";
+            this.grpResults.Controls.Add(this.lblResultsYourBmi);
+            this.grpResults.Controls.Add(this.label4);
+            this.grpResults.Location = new System.Drawing.Point(33, 263);
+            this.grpResults.Name = "grpResults";
+            this.grpResults.Size = new System.Drawing.Size(468, 100);
+            this.grpResults.TabIndex = 8;
+            this.grpResults.TabStop = false;
             // 
             // lblResultsYourBmi
             // 
@@ -173,15 +161,6 @@
             this.lblResultsYourBmi.TabIndex = 2;
             this.lblResultsYourBmi.Text = "label6";
             this.lblResultsYourBmi.Click += new System.EventHandler(this.lblResultsYourBmi_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Weight Category";
             // 
             // label4
             // 
@@ -201,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 388);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpResults);
             this.Controls.Add(this.btnCalculateBMI);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblWeight);
@@ -214,8 +193,8 @@
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpResults.ResumeLayout(false);
+            this.grpResults.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,10 +212,8 @@
         private System.Windows.Forms.RadioButton rbtnUsUnit;
         private System.Windows.Forms.RadioButton rbtnMetric;
         private System.Windows.Forms.Button btnCalculateBMI;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblResultWeightCategory;
+        private System.Windows.Forms.GroupBox grpResults;
         private System.Windows.Forms.Label lblResultsYourBmi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }

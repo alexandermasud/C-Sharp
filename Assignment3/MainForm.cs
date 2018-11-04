@@ -12,10 +12,13 @@ namespace Assignment3
 {
     public partial class MainForm : Form
     {
+        // Inits BMICalculator object
         private BMICalculator bmiCalc = new BMICalculator();
         public MainForm()
         {
             InitializeComponent();
+
+            // Sets GUI to metric/kg
             InitializeGUI();
         }
 
@@ -23,12 +26,12 @@ namespace Assignment3
         {
             this.Text = "The Body Mass Calculator";
 
-            // input
-            rbtnUsUnit.Checked = true;
-            lblHeight.Text = "Height (feet)";
-            lblWeight.Text = "Weight (lbs)";
+            // Sets cm/kg
+            rbtnMetric.Checked = true;
+            lblHeight.Text = "Height (cm)";
+            lblWeight.Text = "Weight (kg)";
 
-            // output
+            // Clears input values
             txtWeight.Text = string.Empty;
             txtHeight.Text = string.Empty;
         }
@@ -36,20 +39,21 @@ namespace Assignment3
 
         // Calculate button
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
             bool ok = ReadInputBMI();
 
             if (ok)
             {
-                // Calculates and displays result
                 DisplayResults();
             }
         }
 
+        // Reads input values
         private bool ReadInputBMI()
         {
             bool isInputOk = false;
 
+           
             ReadName();
             ReadUnitType();
             isInputOk = ReadHeight();
@@ -58,6 +62,7 @@ namespace Assignment3
             return isInputOk;
         }
 
+        // (cm/kg) or (feet, lbs)
         private void ReadUnitType()
         {
             if (rbtnMetric.Checked)
@@ -66,7 +71,7 @@ namespace Assignment3
                 bmiCalc.SetUnit(UnitTypes.American);
         }
 
-
+        // Reads username
         private void ReadName()
         {
             txtName.Text.Trim();
@@ -77,6 +82,7 @@ namespace Assignment3
                 bmiCalc.SetName("Unknown");
         }
 
+        // Reads the height
         private bool ReadHeight()
         {
             double outValue = 0;
@@ -109,7 +115,7 @@ namespace Assignment3
             return ok;
         }
 
-
+        // Reads the weight
         private bool ReadWeight()
         {
             double outValue = 0;
@@ -142,9 +148,11 @@ namespace Assignment3
             return ok;
         }
 
+        // Calculates and displays the result
         private void DisplayResults ()
         {
             lblResultsYourBmi.Text = bmiCalc.CalculateBMI().ToString("f2");
+            grpResults.Text = "Results for " + bmiCalc.GetName();
             
         }
 
@@ -169,6 +177,22 @@ namespace Assignment3
         private void lblResultsYourBmi_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbtnMetric_CheckedChanged(object sender, EventArgs e)
+        {
+            lblHeight.Text = "Height (cm)";
+            lblWeight.Text = "Weight (kg)";
+            txtWeight.Text = string.Empty;
+            txtHeight.Text = string.Empty;
+        }
+
+        private void rbtnUsUnit_CheckedChanged(object sender, EventArgs e)
+        {
+            lblHeight.Text = "Height (feet)";
+            lblWeight.Text = "Weight (lbs)";
+            txtWeight.Text = string.Empty;
+            txtHeight.Text = string.Empty;
         }
     }
 }
