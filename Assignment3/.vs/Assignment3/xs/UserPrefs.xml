@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{1145D821-74CF-429D-A8B0-7BDC887769F3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BMICalculator.cs">
+    <Files>
+      <File FileName="BMICalculator.cs" Line="63" Column="5" />
+      <File FileName="MainForm.cs" Line="1" Column="1" />
+      <File FileName="UnitTypes.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="MainForm.resx" Line="1" Column="1" />
+      <File FileName="MainForm.Designer.cs" Line="1" Column="1" />
+      <File FileName="App.config" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assignment3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

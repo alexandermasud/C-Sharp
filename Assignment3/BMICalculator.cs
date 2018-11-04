@@ -37,9 +37,26 @@ namespace Assignment3
     }
 
     // Sets unitTypes
-    public unitTypes SettUnit(UnitTypes value)
+    public unitTypes SetUnit(UnitTypes value)
     {
         unit = value;
+    }
+
+    // Calculates BMI
+    public double CalculateBMI (){
+        double bmiValue = 0.0;
+        double factor = 0.0;
+
+        if (unit== UnitTypes.American){
+            factor = 703.0;
+        }
+        else{
+            factor = 1.0;
+        }
+
+        bmiValue = factor * weight / (height * height);
+
+        return bmiValue;
     }
 
 
