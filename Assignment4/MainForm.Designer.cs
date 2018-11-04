@@ -1,6 +1,6 @@
 ﻿namespace Assignment4
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,11 +39,14 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblEnd1 = new System.Windows.Forms.Label();
             this.lblEnd2 = new System.Windows.Forms.Label();
             this.lblTotalCost = new System.Windows.Forms.Label();
             this.lblNumGuest = new System.Windows.Forms.Label();
+            this.listBox = new System.Windows.Forms.ListBox();
+            this.lblGuestList = new System.Windows.Forms.Label();
+            this.btnListBoxChange = new System.Windows.Forms.Button();
+            this.btnListBoxDelete = new System.Windows.Forms.Button();
             this.grpNewParty.SuspendLayout();
             this.grpInviteGuest.SuspendLayout();
             this.SuspendLayout();
@@ -148,15 +151,6 @@
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // lblEnd1
             // 
             this.lblEnd1.AutoSize = true;
@@ -193,20 +187,58 @@
             this.lblNumGuest.TabIndex = 3;
             this.lblNumGuest.Text = "lblNumGuest";
             // 
-            // Form1
+            // listBox
+            // 
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(460, 69);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(286, 277);
+            this.listBox.TabIndex = 4;
+            // 
+            // lblGuestList
+            // 
+            this.lblGuestList.AutoSize = true;
+            this.lblGuestList.Location = new System.Drawing.Point(577, 42);
+            this.lblGuestList.Name = "lblGuestList";
+            this.lblGuestList.Size = new System.Drawing.Size(54, 13);
+            this.lblGuestList.TabIndex = 5;
+            this.lblGuestList.Text = "Guest List";
+            // 
+            // btnListBoxChange
+            // 
+            this.btnListBoxChange.Location = new System.Drawing.Point(460, 362);
+            this.btnListBoxChange.Name = "btnListBoxChange";
+            this.btnListBoxChange.Size = new System.Drawing.Size(75, 23);
+            this.btnListBoxChange.TabIndex = 6;
+            this.btnListBoxChange.Text = "button1";
+            this.btnListBoxChange.UseVisualStyleBackColor = true;
+            // 
+            // btnListBoxDelete
+            // 
+            this.btnListBoxDelete.Location = new System.Drawing.Point(671, 362);
+            this.btnListBoxDelete.Name = "btnListBoxDelete";
+            this.btnListBoxDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnListBoxDelete.TabIndex = 6;
+            this.btnListBoxDelete.Text = "button1";
+            this.btnListBoxDelete.UseVisualStyleBackColor = true;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnListBoxDelete);
+            this.Controls.Add(this.btnListBoxChange);
+            this.Controls.Add(this.lblGuestList);
+            this.Controls.Add(this.listBox);
             this.Controls.Add(this.lblNumGuest);
             this.Controls.Add(this.lblEnd2);
             this.Controls.Add(this.lblTotalCost);
             this.Controls.Add(this.lblEnd1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.grpInviteGuest);
             this.Controls.Add(this.grpNewParty);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Party Organiser";
             this.grpNewParty.ResumeLayout(false);
             this.grpNewParty.PerformLayout();
             this.grpInviteGuest.ResumeLayout(false);
@@ -229,11 +261,14 @@
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEnd1;
         private System.Windows.Forms.Label lblEnd2;
         private System.Windows.Forms.Label lblTotalCost;
         private System.Windows.Forms.Label lblNumGuest;
+        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Label lblGuestList;
+        private System.Windows.Forms.Button btnListBoxChange;
+        private System.Windows.Forms.Button btnListBoxDelete;
     }
 }
 
