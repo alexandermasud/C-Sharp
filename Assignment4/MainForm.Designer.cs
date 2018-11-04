@@ -46,7 +46,6 @@
             this.lblNumGuest = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
             this.lblGuestList = new System.Windows.Forms.Label();
-            this.btnListBoxChange = new System.Windows.Forms.Button();
             this.btnListBoxDelete = new System.Windows.Forms.Button();
             this.grpNewParty.SuspendLayout();
             this.grpInviteGuest.SuspendLayout();
@@ -218,16 +217,6 @@
             this.lblGuestList.TabIndex = 5;
             this.lblGuestList.Text = "Guest List";
             // 
-            // btnListBoxChange
-            // 
-            this.btnListBoxChange.Location = new System.Drawing.Point(460, 362);
-            this.btnListBoxChange.Name = "btnListBoxChange";
-            this.btnListBoxChange.Size = new System.Drawing.Size(75, 23);
-            this.btnListBoxChange.TabIndex = 6;
-            this.btnListBoxChange.Text = "Change";
-            this.btnListBoxChange.UseVisualStyleBackColor = true;
-            this.btnListBoxChange.Click += new System.EventHandler(this.btnListBoxChange_Click);
-            // 
             // btnListBoxDelete
             // 
             this.btnListBoxDelete.Location = new System.Drawing.Point(671, 362);
@@ -244,7 +233,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnListBoxDelete);
-            this.Controls.Add(this.btnListBoxChange);
             this.Controls.Add(this.lblGuestList);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.lblNumGuest);
@@ -283,7 +271,6 @@
         private System.Windows.Forms.Label lblNumGuest;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Label lblGuestList;
-        private System.Windows.Forms.Button btnListBoxChange;
         private System.Windows.Forms.Button btnListBoxDelete;
         private System.Windows.Forms.Button btnAdd;
     }
