@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Assignment5
 {
-    class UnitTypes
+    enum UnitTypes
     {
+        cm,
+        ft,
+        g,
+        gallon,
+        inch,
+        kg,
+        lb,
+        lit,
+        m,
+        oz,
+        piece
+
     }
 }
