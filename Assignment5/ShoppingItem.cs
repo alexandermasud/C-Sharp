@@ -20,5 +20,62 @@ namespace Assignment5
             this.unit = unit;
 
         }
+
+        public ShoppingItem() : this("Unknown", 1.0, UnitTypes.piece)
+        {
+
+        }
+
+        public ShoppingItem(string description) : this(description, 1.0, UnitTypes.piece)
+        {
+
+        }
+
+        public UnitTypes Unit {
+
+            get { return Unit; }
+            set {
+                // Check if value is defined in the enum
+                if (Enum.IsDefined(typeof(UnitTypes), value)) {
+                    unit = value;
+                }
+            }
+        }
+
+        public string Description{
+            get { return description; }
+            set {
+                if (string.IsNullOrEmpty(value))
+                {
+
+                }
+                else {
+                    description = value;
+                }
+            }
+        }
+
+        public double Amount
+        {
+            get { return amount; }
+            set
+            {
+                if (amount < 0)
+                {
+
+                }
+                else {
+                    amount = amount;
+                }
+            }
+        }
+
+        public override string ToString()
+        {
+            string textOut = string.Empty;
+            textOut = $"{ description,-45} {amount,6:f2} {unit,-6}";
+            return textOut;
+        }
+
     }
 }
