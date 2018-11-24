@@ -45,11 +45,8 @@ namespace Assignment5
         public string Description{
             get { return description; }
             set {
-                if (string.IsNullOrEmpty(value))
+                if (!string.IsNullOrEmpty(value))
                 {
-
-                }
-                else {
                     description = value;
                 }
             }
@@ -60,13 +57,11 @@ namespace Assignment5
             get { return amount; }
             set
             {
-                if (amount < 0)
+                if (value > 0.0)
                 {
-
+                    amount = value;
                 }
-                else {
-                    amount = amount;
-                }
+                
             }
         }
 

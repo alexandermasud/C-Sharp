@@ -19,7 +19,6 @@ namespace Assignment5
         {
 
             InitializeComponent();
-
             initializeGUI();
            
         }
@@ -41,7 +40,7 @@ namespace Assignment5
 
                
                 itemManager.AddItem(item);
-                //UpdateGUI();
+                UpdateGUI();
             }
         }
 
@@ -61,9 +60,7 @@ namespace Assignment5
             }
 
             item.Unit = ReadUnit(out success);
-
             return item;
-
         }
 
         private double ReadAmount(out bool success) {
@@ -102,13 +99,12 @@ namespace Assignment5
             }
 
             return description;
-
         }
 
 
         private UnitTypes ReadUnit(out bool success) {
 
-            UnitTypes unit = UnitTypes.cm;
+            UnitTypes unit = UnitTypes.piece;
             success = false;
 
             if (cmbUnit.Text.Equals(string.Empty))
@@ -117,6 +113,7 @@ namespace Assignment5
                 cmbUnit.Focus();
             }
             else {
+                unit = (UnitTypes)Enum.Parse(typeof(UnitTypes), cmbUnit.Text);
                 success = true;
             }
 
@@ -126,6 +123,20 @@ namespace Assignment5
         private void GiveMessage(string message) {
 
             MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+
+        }
+
+        private void UpdateGUI() {
+
+            txtAmount.Clear();
+            txtDescription.Clear();
+            cmbUnit.SelectedIndex = (int)UnitTypes.piece;
+            lstItems.Items.Clear();
+
+            for (int i = 0; i < itemManager.Count; i++)
+            {
+                lstItems.Items.Add(itemManager.GetItem(i).ToString());
+            }
 
         }
     }

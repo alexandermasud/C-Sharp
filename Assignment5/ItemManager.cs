@@ -35,13 +35,14 @@ namespace Assignment5
         public bool AddItem(ShoppingItem itemIn)
         {
             bool ok = false;
-                if (itemIn != null) {
+
+            Console.WriteLine(itemIn);
+
+            if (itemIn != null) {
                     itemList.Add(itemIn);
                     ok = true;
                 }
                 return ok;
-          
-
         }
 
         public bool CheckIndex(int index) {
