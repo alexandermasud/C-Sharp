@@ -19,6 +19,7 @@ namespace Assignment5
 
         }
 
+        // Checks if item is avaiable in given index 
         public ShoppingItem GetItem (int index) {
             if (!CheckIndex(index)) {
                 return null;
@@ -28,10 +29,12 @@ namespace Assignment5
                
         }
 
+        // Counts how long to shoppinglist is
         public int Count {
             get { return itemList.Count; }
         }
 
+        // Adds item to shoppinglist
         public bool AddItem(ShoppingItem itemIn)
         {
             bool ok = false;
@@ -45,30 +48,11 @@ namespace Assignment5
                 return ok;
         }
 
+        // Checks if index exist
         public bool CheckIndex(int index) {
             return (index >= 0) && (index < itemList.Count);
         }
 
-        // Change item
-        public bool ChangeItem(ShoppingItem itemIn, int index) {
-
-            bool ok = false;
-            if ((itemIn != null) && CheckIndex(index)) {
-                itemList[index] = itemIn;
-                ok = true;
-            }
-            return ok;
-        }
-
-        // Remove item
-        public bool DeleteItem(int index) {
-            bool ok = false;
-            if (CheckIndex (index)) {
-                itemList.RemoveAt(index);
-                ok = true;
-            }
-            return ok;
-        }
 
         // Info about items
         public string[] GetItemsInfoStrings() {

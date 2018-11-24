@@ -9,6 +9,7 @@ namespace Assignment5
     class ShoppingItem
     {
 
+        // Decalres variables for class
         private string description;
         private double amount;
         private UnitTypes unit;
@@ -31,6 +32,7 @@ namespace Assignment5
 
         }
 
+        // Get and set for Unit
         public UnitTypes Unit {
 
             get { return Unit; }
@@ -42,6 +44,7 @@ namespace Assignment5
             }
         }
 
+        // Get and set for description
         public string Description{
             get { return description; }
             set {
@@ -52,6 +55,7 @@ namespace Assignment5
             }
         }
 
+        // Get and set for amount
         public double Amount
         {
             get { return amount; }
@@ -65,6 +69,7 @@ namespace Assignment5
             }
         }
 
+        // Styles text for better readability 
         public override string ToString()
         {
             string textOut = string.Empty;
