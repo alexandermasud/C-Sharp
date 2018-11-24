@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_description = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.cmbUnit = new System.Windows.Forms.ComboBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cmbUnits = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lbl_description = new System.Windows.Forms.Label();
             this.lstItems = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -41,8 +41,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbUnits);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cmbUnit);
+            this.groupBox1.Controls.Add(this.txtAmount);
             this.groupBox1.Controls.Add(this.lblAmount);
             this.groupBox1.Controls.Add(this.txtDescription);
             this.groupBox1.Controls.Add(this.lbl_description);
@@ -52,24 +52,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // lbl_description
+            // cmbUnit
             // 
-            this.lbl_description.AutoSize = true;
-            this.lbl_description.Location = new System.Drawing.Point(31, 30);
-            this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(60, 13);
-            this.lbl_description.TabIndex = 0;
-            this.lbl_description.Text = "Description";
-            this.lbl_description.Click += new System.EventHandler(this.label1_Click);
+            this.cmbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUnit.FormattingEnabled = true;
+            this.cmbUnit.Location = new System.Drawing.Point(214, 76);
+            this.cmbUnit.Name = "cmbUnit";
+            this.cmbUnit.Size = new System.Drawing.Size(102, 21);
+            this.cmbUnit.TabIndex = 4;
             // 
-            // txtDescription
+            // txtAmount
             // 
-            this.txtDescription.Location = new System.Drawing.Point(97, 27);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(219, 20);
-            this.txtDescription.TabIndex = 1;
+            this.txtAmount.Location = new System.Drawing.Point(97, 77);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(111, 20);
+            this.txtAmount.TabIndex = 3;
             // 
             // lblAmount
             // 
@@ -80,21 +78,21 @@
             this.lblAmount.TabIndex = 2;
             this.lblAmount.Text = "Amount";
             // 
-            // textBox1
+            // txtDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtDescription.Location = new System.Drawing.Point(97, 27);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(219, 20);
+            this.txtDescription.TabIndex = 1;
             // 
-            // cmbUnits
+            // lbl_description
             // 
-            this.cmbUnits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUnits.FormattingEnabled = true;
-            this.cmbUnits.Location = new System.Drawing.Point(214, 76);
-            this.cmbUnits.Name = "cmbUnits";
-            this.cmbUnits.Size = new System.Drawing.Size(102, 21);
-            this.cmbUnits.TabIndex = 4;
+            this.lbl_description.AutoSize = true;
+            this.lbl_description.Location = new System.Drawing.Point(31, 30);
+            this.lbl_description.Name = "lbl_description";
+            this.lbl_description.Size = new System.Drawing.Size(60, 13);
+            this.lbl_description.TabIndex = 0;
+            this.lbl_description.Text = "Description";
             // 
             // lstItems
             // 
@@ -114,6 +112,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // MainForm
             // 
@@ -135,8 +134,8 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_description;
-        private System.Windows.Forms.ComboBox cmbUnits;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbUnit;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.ListBox lstItems;

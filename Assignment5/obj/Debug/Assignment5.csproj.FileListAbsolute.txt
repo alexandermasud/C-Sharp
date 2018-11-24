@@ -1,0 +1,10 @@
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.MainForm.resources
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.csproj.GenerateResource.cache
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment5\obj\Debug\Assignment5.pdb
