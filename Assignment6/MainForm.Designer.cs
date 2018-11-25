@@ -42,12 +42,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newCtrlNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitAltF4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDatafileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeDatafileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitAltF4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(531, 44);
+            this.label3.Location = new System.Drawing.Point(445, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
@@ -82,16 +86,16 @@
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(131, 42);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(352, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(241, 20);
             this.dateTimePicker.TabIndex = 3;
             // 
             // cmbBox
             // 
             this.cmbBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBox.FormattingEnabled = true;
-            this.cmbBox.Location = new System.Drawing.Point(610, 41);
+            this.cmbBox.Location = new System.Drawing.Point(489, 41);
             this.cmbBox.Name = "cmbBox";
-            this.cmbBox.Size = new System.Drawing.Size(121, 21);
+            this.cmbBox.Size = new System.Drawing.Size(242, 21);
             this.cmbBox.TabIndex = 4;
             // 
             // textBox1
@@ -143,7 +147,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -159,28 +162,28 @@
             // newCtrlNToolStripMenuItem
             // 
             this.newCtrlNToolStripMenuItem.Name = "newCtrlNToolStripMenuItem";
-            this.newCtrlNToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newCtrlNToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.newCtrlNToolStripMenuItem.Text = "New Ctrl+N";
             this.newCtrlNToolStripMenuItem.Click += new System.EventHandler(this.newCtrlNToolStripMenuItem_Click);
-            // 
-            // exitAltF4ToolStripMenuItem
-            // 
-            this.exitAltF4ToolStripMenuItem.Name = "exitAltF4ToolStripMenuItem";
-            this.exitAltF4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitAltF4ToolStripMenuItem.Text = "Exit Alt-F4";
-            this.exitAltF4ToolStripMenuItem.Click += new System.EventHandler(this.exitAltF4ToolStripMenuItem_Click);
             // 
             // openDatafileToolStripMenuItem
             // 
             this.openDatafileToolStripMenuItem.Name = "openDatafileToolStripMenuItem";
-            this.openDatafileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openDatafileToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.openDatafileToolStripMenuItem.Text = "Open datafile";
             // 
             // closeDatafileToolStripMenuItem
             // 
             this.closeDatafileToolStripMenuItem.Name = "closeDatafileToolStripMenuItem";
-            this.closeDatafileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeDatafileToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.closeDatafileToolStripMenuItem.Text = "Close datafile";
+            // 
+            // exitAltF4ToolStripMenuItem
+            // 
+            this.exitAltF4ToolStripMenuItem.Name = "exitAltF4ToolStripMenuItem";
+            this.exitAltF4ToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.exitAltF4ToolStripMenuItem.Text = "Exit Alt-F4";
+            this.exitAltF4ToolStripMenuItem.Click += new System.EventHandler(this.exitAltF4ToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -197,11 +200,51 @@
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(43, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Datum";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(247, 141);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Tid";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(330, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Prioritet";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(445, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Beskrivning";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 483);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblClock);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bntAdd);
@@ -243,6 +286,10 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem openDatafileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeDatafileToolStripMenuItem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -20,12 +20,12 @@ namespace Assignment6
             InitializeGUI();
         }
 
+        // Clears PriorityBox and set Normal as default, sets tooltip on dateTimePicker, desabled File/open and File/close
         private void InitializeGUI() {
 
-            //cmbBox.Items.Clear();
-            //string[] priority = Enum.GetNames(typeof(PriorityType));
-            //foreach (var item in priority) cmbBox.Items.Add(item.Replace("_", " "));
-            cmbBox.Items.AddRange(Enum.GetNames(typeof(PriorityType)));
+            cmbBox.Items.Clear();
+            string[] priority = Enum.GetNames(typeof(PriorityType));
+            foreach (var item in priority) cmbBox.Items.Add(item.Replace("_", " "));
             cmbBox.SelectedIndex = (int)PriorityType.Normal;
 
             ToolTip toolTip = new ToolTip();
@@ -35,12 +35,12 @@ namespace Assignment6
             dateTimePicker.CustomFormat = "yyyy-MM-dd  HH:mm";
 
             openDatafileToolStripMenuItem.Enabled = false;
-            closeDatafileToolStripMenuItem.Enabled = false;   
+            closeDatafileToolStripMenuItem.Enabled = false;
         }
 
+        // The add button on the form
         private void bntAdd_Click(object sender, EventArgs e)
         {
-            
             bool success = false;
 
             Task item = ReadInput(out success);
@@ -52,14 +52,13 @@ namespace Assignment6
             }
         }
 
+        // Calls on the Date and time, Description and Priority 
         private Task ReadInput(out bool success)
         {
             success = false;
             Task item = new Task();
 
             item.DateAndTime = ReadDateAndTime(out success);
-
-            Console.WriteLine(item.DateAndTime);
             
             if (!success) {
                 return null;
@@ -74,6 +73,7 @@ namespace Assignment6
                 return item;
         }
 
+        // Returns the date and time
         private DateTime ReadDateAndTime(out bool success) {
             DateTime dateAndTime = default(DateTime);
             success = false;
@@ -85,12 +85,13 @@ namespace Assignment6
             }
             else {
                 dateAndTime = dateTimePicker.Value;
-                Console.WriteLine(dateAndTime);
+                
                 success = true;
             }
             return dateAndTime;
         }
 
+        // Returns the description
         private string ReadDescription(out bool success) {
             string description = "";
             success = false;
@@ -98,7 +99,7 @@ namespace Assignment6
             if (textBox1.Text.Equals(string.Empty))
             {
                 GiveMessage("Invalid description");
-                cmbBox.Focus();
+                textBox1.Focus();
             }
             else {
                 description = textBox1.Text;
@@ -107,6 +108,7 @@ namespace Assignment6
             return description;
         }
 
+        // Returns priority
         private PriorityType ReadPriority (out bool success) {
 
             PriorityType priority = PriorityType.Less_important;
@@ -120,36 +122,65 @@ namespace Assignment6
                 cmbBox.Focus();
             }
             else {
-                priority = (PriorityType)Enum.Parse(typeof(PriorityType), cmbBox.Text);
+
+                // Less important and More important has space, but Enum PriorityType has underscore _ which need to be controlled for
+                string checkForSpace = cmbBox.Text;
+                bool hasSpace = checkForSpace.Contains(" ");
+
+
+                if (hasSpace)
+                {
+                    checkForSpace = checkForSpace.Replace(" ", "_");
+                    priority = (PriorityType)Enum.Parse(typeof(PriorityType), checkForSpace);
+                }
+                else {
+                    priority = (PriorityType)Enum.Parse(typeof(PriorityType), cmbBox.Text);
+                }
+                
                 success = true;
             }
 
             return priority;
         }
 
+        // Shows messagebox with error message
         private void GiveMessage(string message) {
             MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        // Updates GUI after new task has been added
+        // Listbox not aligning correctly, out of my control. Aligns perfect in Console.WriteLine(tempString) row 166 and 170. 
+        // What happens inside of listBox1.Items.Add is out of my control
         private void UpdateGUI() {
             dateTimePicker.Value = DateTime.Now;
             cmbBox.SelectedIndex = (int)PriorityType.Normal;
             listBox1.Items.Clear();
+            textBox1.Clear();
 
+
+            string tempString = "";
+            
             for (int i = 0; i < taskManager.Count; i++)
             {
-                listBox1.Items.Add(taskManager.GetItem(i).ToString());
+                tempString = taskManager.GetItem(i).ToString();
+
+                if (tempString.Contains("_"))
+                {
+                    tempString = tempString.Replace("_", " ");
+                    listBox1.Items.Add(tempString);
+                    Console.WriteLine(tempString);
+                }
+                else {
+                    listBox1.Items.Add(tempString);
+                    Console.WriteLine(tempString);
+                }
             }
         }
 
+        // The bottom right timer 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblClock.Text = DateTime.Now.ToLongTimeString();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void newCtrlNToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,23 +188,25 @@ namespace Assignment6
             InitializeGUI();
         }
 
+        // File/exit
         private void exitAltF4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             DialogResult result = MessageBox.Show("Avsluta?", "Important Query", MessageBoxButtons.OKCancel);
 
             if (result == DialogResult.OK) {
                 Close();
             }
-         
         }
 
+        // Help/About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            AboutBox a = new AboutBox();
+            a.Show();
 
         }
 
+        // Key shortcuts
         private void MainForm_KeyDown(object sender, KeyEventArgs e) {
 
             if ((e.Control && e.KeyCode == Keys.N)) {
@@ -188,7 +221,5 @@ namespace Assignment6
                 }
             }
         }
-
-        
     }
 }

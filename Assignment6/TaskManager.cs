@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 namespace Assignment6
 {
     class TaskManager
-    {
+    {   
+        // Creates itemList
         private List<Task> itemList;
 
-
+        // Starts itemlist
         public TaskManager() {
             itemList = new List<Task>();
         }
 
+        // Returns index of list
         public Task GetItem(int index) {
             if (!CheckedIndex(index)){
                 return null;
@@ -23,13 +25,14 @@ namespace Assignment6
 
         }
 
+        // Counts length of itemlist
         public int Count {
             get { return itemList.Count; }
         }
 
-        public bool AddItem(Task itemIn) {
 
-            Console.WriteLine("itemIn: " + itemIn);
+        // Adds item to list
+        public bool AddItem(Task itemIn) {
 
             bool ok = false;
             if (itemIn != null) {
@@ -39,10 +42,12 @@ namespace Assignment6
             return ok;
         }
 
+        // Checks if there is more in list
         public bool CheckedIndex(int index) {
             return ((index >= 0) && (index < itemList.Count));
         }
 
+        // Assigns ItemObjects to given index in stringInfoStrings list
         public string[] GetItemsInfoStrings() {
             string[] stringInfoStrings = new string[itemList.Count];
 

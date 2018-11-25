@@ -8,3 +8,4 @@ C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment6\obj\Debug\Assignment6.csproj.
 C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment6\obj\Debug\Assignment6.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment6\obj\Debug\Assignment6.exe
 C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment6\obj\Debug\Assignment6.pdb
+C:\Users\Alex\Documents\GitHub\C-Sharp\Assignment6\obj\Debug\Assignment6.AboutBox.resources
