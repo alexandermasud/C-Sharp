@@ -42,6 +42,8 @@
             this.lblResultsYourBmi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.grpResults.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +143,8 @@
             // 
             // grpResults
             // 
+            this.grpResults.Controls.Add(this.lblCategory);
+            this.grpResults.Controls.Add(this.label2);
             this.grpResults.Controls.Add(this.lblResultsYourBmi);
             this.grpResults.Controls.Add(this.label4);
             this.grpResults.Location = new System.Drawing.Point(33, 263);
@@ -154,9 +158,9 @@
             this.lblResultsYourBmi.AutoSize = true;
             this.lblResultsYourBmi.Location = new System.Drawing.Point(384, 25);
             this.lblResultsYourBmi.Name = "lblResultsYourBmi";
-            this.lblResultsYourBmi.Size = new System.Drawing.Size(35, 13);
+            this.lblResultsYourBmi.Size = new System.Drawing.Size(34, 13);
             this.lblResultsYourBmi.TabIndex = 2;
-            this.lblResultsYourBmi.Text = "label6";
+            this.lblResultsYourBmi.Text = "lblBmi";
             // 
             // label4
             // 
@@ -170,6 +174,24 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Weight Category";
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(387, 57);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(59, 13);
+            this.lblCategory.TabIndex = 4;
+            this.lblCategory.Text = "lblCategory";
             // 
             // MainForm
             // 
@@ -212,6 +234,8 @@
         private System.Windows.Forms.Label lblResultsYourBmi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label label2;
     }
 }
 

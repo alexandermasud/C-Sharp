@@ -144,9 +144,33 @@ namespace Assignment3
         // Calculates and displays the result
         private void DisplayResults ()
         {
+
+            double bmi = bmiCalc.CalculateBMI();
             lblResultsYourBmi.Text = bmiCalc.CalculateBMI().ToString("f2");
+
+            if (bmi > 40) {
+                lblCategory.Text = "Class 3 Obesity";
+            }
+            else if (bmi >= 35)
+            {
+                lblCategory.Text = "Class 2 Obesity";
+            }
+            else if (bmi >= 30) {
+                lblCategory.Text = "Class 1 Obesity";
+            }
+            else if (bmi >= 25) {
+                lblCategory.Text = "Overweight";
+            }
+            else if (bmi >= 18.5)
+            {
+                lblCategory.Text = "Normal";
+            }
+            else
+            {
+                lblCategory.Text = "Underweight";
+            }
+
             grpResults.Text = "Results for " + bmiCalc.GetName();
-            
         }
 
         // Clears input fields when change unit to Metric
@@ -166,5 +190,7 @@ namespace Assignment3
             txtWeight.Text = string.Empty;
             txtHeight.Text = string.Empty;
         }
+
+        
     }
 }
