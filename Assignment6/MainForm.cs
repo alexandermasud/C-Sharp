@@ -149,8 +149,6 @@ namespace Assignment6
         }
 
         // Updates GUI after new task has been added
-        // Listbox not aligning correctly, out of my control. Aligns perfect in Console.WriteLine(tempString) row 166 and 170. 
-        // What happens inside of listBox1.Items.Add is out of my control
         private void UpdateGUI() {
             dateTimePicker.Value = DateTime.Now;
             cmbBox.SelectedIndex = (int)PriorityType.Normal;

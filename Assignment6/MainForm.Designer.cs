@@ -117,10 +117,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 14;
             this.listBox1.Location = new System.Drawing.Point(36, 160);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(704, 251);
+            this.listBox1.Size = new System.Drawing.Size(704, 242);
             this.listBox1.TabIndex = 7;
             // 
             // lblClock
@@ -212,7 +214,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(247, 141);
+            this.label5.Location = new System.Drawing.Point(240, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 13);
             this.label5.TabIndex = 11;
@@ -221,7 +223,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(330, 141);
+            this.label6.Location = new System.Drawing.Point(342, 141);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 12;
@@ -230,7 +232,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(445, 141);
+            this.label7.Location = new System.Drawing.Point(477, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 13;

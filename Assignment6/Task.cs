@@ -77,7 +77,7 @@ namespace Assignment6
         {
             
             string textOut = string.Empty;
-            textOut = $"{ dateAndTime.ToShortDateString(),-60} {GetTimeString(),-25} {GetPriorityString(),-30} {description}";
+            textOut = $"{ dateAndTime.ToShortDateString(),-27} {GetTimeString(),-15} {GetPriorityString(),-20} {description}";
             return textOut;
         }
     }
