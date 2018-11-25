@@ -21,8 +21,21 @@ namespace Assignment6
         }
 
         private void InitializeGUI() {
+
+            //cmbBox.Items.Clear();
+            //string[] priority = Enum.GetNames(typeof(PriorityType));
+            //foreach (var item in priority) cmbBox.Items.Add(item.Replace("_", " "));
             cmbBox.Items.AddRange(Enum.GetNames(typeof(PriorityType)));
-            cmbBox.SelectedIndex = (int)PriorityType.Less_important;
+            cmbBox.SelectedIndex = (int)PriorityType.Normal;
+
+            ToolTip toolTip = new ToolTip();
+
+            toolTip.SetToolTip(dateTimePicker, "Click to open calendar");
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "yyyy-MM-dd  HH:mm";
+
+            openDatafileToolStripMenuItem.Enabled = false;
+            closeDatafileToolStripMenuItem.Enabled = false;   
         }
 
         private void bntAdd_Click(object sender, EventArgs e)
@@ -120,7 +133,7 @@ namespace Assignment6
 
         private void UpdateGUI() {
             dateTimePicker.Value = DateTime.Now;
-            cmbBox.SelectedIndex = (int)PriorityType.Less_important;
+            cmbBox.SelectedIndex = (int)PriorityType.Normal;
             listBox1.Items.Clear();
 
             for (int i = 0; i < taskManager.Count; i++)
@@ -128,5 +141,54 @@ namespace Assignment6
                 listBox1.Items.Add(taskManager.GetItem(i).ToString());
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void newCtrlNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InitializeGUI();
+        }
+
+        private void exitAltF4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Avsluta?", "Important Query", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK) {
+                Close();
+            }
+         
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e) {
+
+            if ((e.Control && e.KeyCode == Keys.N)) {
+                InitializeGUI();
+            }
+            else if ((e.Alt && e.KeyCode == Keys.F4)) {
+                DialogResult result = MessageBox.Show("Avsluta?", "Important Query", MessageBoxButtons.OKCancel);
+
+                if (result == DialogResult.OK)
+                {
+                    Close();
+                }
+            }
+        }
+
+        
     }
 }
