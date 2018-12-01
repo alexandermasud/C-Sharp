@@ -6,21 +6,21 @@ namespace Assignment2
     {
         public FloatingPointsNumberWhileAdd()
         {
-            int asterisk = Graphics.AmountOfAsterisk();
-            int rowOfDashes = Graphics.RowOfDashes();
-            DisplayMenu(asterisk, rowOfDashes);
+            
+            
+            DisplayMenu();
             double total = ReadNumbers();
             DisplayTotal(total);
             return;
         }
 
-        private void DisplayMenu(int asterisk, int rowOfDashes){
+        private void DisplayMenu(){
             // Presenterar menyn för att sumera decimaltal
-            Console.WriteLine(new string('*', asterisk) + " Summation of real numbers " + new string('*', asterisk));
-            Console.WriteLine(new string(' ', asterisk * 2) + "using a while loop");
-            Graphics.EmptyRow();
+            Console.WriteLine(new string('*', 4) + " Summation of real numbers " + new string('*', 4));
+            Console.WriteLine(new string(' ', 4 * 2) + "using a while loop");
+            Console.WriteLine("");
             Console.WriteLine("Write 0 to finish!");
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('-', 50));
         }
 
         private double ReadNumbers(){

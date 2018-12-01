@@ -6,20 +6,20 @@ namespace Assignment2
         public CurrencyConverter()
         {
 
-            int stars = Graphics.AmountOfStars();
-            int rowOfDashes = Graphics.RowOfDashes();
-            DisplayMenu(stars);
+           
+            
+            DisplayMenu();
             double total = ReadNumbers();
             string currency = ReadCurrency();
             double exchangeRate = ReadExchangeRate();
             double totalSum = CalculationOfNumbers(total, exchangeRate);
-            DisplayTotal(total, currency, exchangeRate, totalSum, rowOfDashes);
+            DisplayTotal(total, currency, exchangeRate, totalSum);
         }
 
-        private void DisplayMenu(int stars)
+        private void DisplayMenu()
         {
-            Console.WriteLine(new string('+', stars) + " The currency converter " + new string('+', stars));
-            Graphics.EmptyRow();
+            Console.WriteLine(new string('+', 4) + " The currency converter " + new string('+', 4));
+            Console.WriteLine("");
             Console.WriteLine("Write 0 to finish input!");
         }
 
@@ -67,12 +67,12 @@ namespace Assignment2
             totalSum = Math.Round(totalSum, 2);
             return totalSum;
         }
-        private void DisplayTotal(double total, string currency, double exchangeRate, double totalSum, int rowOfDashes)
+        private void DisplayTotal(double total, string currency, double exchangeRate, double totalSum)
         {
             // Skriver ut den totala summan
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine("The sum is " + total + " kr.");
-            Graphics.EmptyRow();
+            Console.WriteLine("");
             Console.WriteLine(total + " kr is converted to " + totalSum + " " + currency + " at the rate of " + exchangeRate + " kr/" + currency + ".");
         }
     }

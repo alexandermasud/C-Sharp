@@ -5,11 +5,11 @@ namespace Assignment2
     {
         public WorkingSchedule()
         {
-            int rowOfDashes = Graphics.RowOfDashes();
-            DisplayMenu(rowOfDashes);
+            
+            DisplayMenu();
         }
 
-        private void DisplayMenu(int rowOfDashes){
+        private void DisplayMenu(){
 
             bool loopContinue = true;
             while (loopContinue)
@@ -17,15 +17,16 @@ namespace Assignment2
 
 
 
-                Console.WriteLine(new string('-', rowOfDashes));
+                Console.WriteLine(new string('-', 50));
                 Console.WriteLine(new string(' ', 10) + "YOUR SCHEDULE PROGRAM");
                 Console.WriteLine("Select from the menu which type of schedule you want to see.");
-                Console.WriteLine(new string('-', rowOfDashes));
-                Graphics.EmptyRow();
+                Console.WriteLine(new string('-', 50));
+
+                Console.WriteLine("");
                 Console.WriteLine("1 Show a list of the weekends to work.");
                 Console.WriteLine("2 Show a list of the nights to work.");
                 Console.WriteLine("0 Return to the Main Menu.");
-                Graphics.EmptyRow();
+                Console.WriteLine("");
 
                 Console.Write("Your choice: ");
                 int userInput = Input.ReadIntegerConsole();

@@ -50,10 +50,10 @@ namespace Assignment2
 
        private void ConvertToCelcius(){
             // Converterar till celcius med 4 graders steg
-            int rowOfDashes = Graphics.RowOfDashes();
-            Console.WriteLine(new string('-', rowOfDashes));
+            
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine("TABLE OF FARNHEIT / CELSUIS VALUES");
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('-', 50));
 
             for (double i = 0; i < 101; i = i + 4)
             {
@@ -64,10 +64,10 @@ namespace Assignment2
 
         private void ConvertToFahrenheit(){
             // Converterar till farenheit med 4 graders steg
-            int rowOfDashes = Graphics.RowOfDashes();
-            Console.WriteLine(new string('-', rowOfDashes));
+     
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine("TABLE OF CELSUIS / FARENHEIT VALUES");
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('-', 50));
 
             for (double i = 0; i < 101; i = i + 4)
             {
@@ -102,8 +102,8 @@ namespace Assignment2
 
         private void DisplayResult(int type, double result){
 
-            int rowOfDashes = Graphics.RowOfDashes();
-            Console.WriteLine(new string('-', rowOfDashes));
+            
+            Console.WriteLine(new string('-', 50));
            
 
             // Beroende på sluttyp så visas F eller C som enhet för temperaturen

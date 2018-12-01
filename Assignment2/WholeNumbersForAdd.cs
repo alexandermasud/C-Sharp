@@ -6,23 +6,22 @@ namespace Assignment2
     {
         public WholeNumbersForAdd()
         {
-            int asterisk = Graphics.AmountOfAsterisk();
-            int rowOfDashes = Graphics.RowOfDashes();
+            
 
-            DisplayMenu(asterisk, rowOfDashes);
+            DisplayMenu();
             int amountOfNumbers = ReadAmountOfNumbers();
             int total = ReadNumbers(amountOfNumbers);
-            DisplayTotal(total, rowOfDashes);
+            DisplayTotal(total);
             return;
         }
 
-        private void DisplayMenu(int asterisk, int rowOfDashes){
+        private void DisplayMenu(){
 
 
-            Console.WriteLine(new string('*',asterisk) + " Summation of whole numbers " + new string('*', asterisk));
-            Console.WriteLine(new string(' ', asterisk*2) + "using a for statement");
-            Graphics.EmptyRow();
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('*', 4) + " Summation of whole numbers " + new string('*', 4));
+            Console.WriteLine(new string(' ', 4*2) + "using a for statement");
+            Console.WriteLine("");
+            Console.WriteLine(new string('-', 50));
 
         }
 
@@ -39,7 +38,7 @@ namespace Assignment2
         {
             // Anger numren samt summerar dessa
             List<int> numList = new List<int>();
-            Graphics.EmptyRow();
+            Console.WriteLine("");
             for (int i = 0; i < amountOfNumbers; i++)
             {
                 Console.Write("Please give the value number no " + (i+1) + " (whole number): ");
@@ -55,10 +54,10 @@ namespace Assignment2
             }
             return total;
         }
-        private void DisplayTotal(int total, int rowOfDashes){
+        private void DisplayTotal(int total){
             // Skriver ut summan av de angivna numrena
 
-            Console.WriteLine(new string('-', rowOfDashes));
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine("The sum is: " + total);
         }
     }
