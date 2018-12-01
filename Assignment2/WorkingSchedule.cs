@@ -9,58 +9,47 @@ namespace Assignment2
             DisplayMenu();
         }
 
+        private void PrintMenu() {
+            Console.WriteLine(new string('-', 50));
+            Console.WriteLine(new string(' ', 10) + "YOUR SCHEDULE PROGRAM");
+            Console.WriteLine("Select from the menu which type of schedule you want to see.");
+            Console.WriteLine(new string('-', 50));
+
+            Console.WriteLine("");
+            Console.WriteLine("1 Show a list of the weekends to work.");
+            Console.WriteLine("2 Show a list of the nights to work.");
+            Console.WriteLine("0 Return to the Main Menu.");
+            Console.WriteLine("");
+        }
+
         private void DisplayMenu(){
 
-            bool loopContinue = true;
-            while (loopContinue)
+            int userInput = 0;
+            do
             {
+            PrintMenu();
+            
+            Console.Write("Your choice: ");
+            userInput = Input.ReadIntegerConsole();
 
-
-
-                Console.WriteLine(new string('-', 50));
-                Console.WriteLine(new string(' ', 10) + "YOUR SCHEDULE PROGRAM");
-                Console.WriteLine("Select from the menu which type of schedule you want to see.");
-                Console.WriteLine(new string('-', 50));
-
-                Console.WriteLine("");
-                Console.WriteLine("1 Show a list of the weekends to work.");
-                Console.WriteLine("2 Show a list of the nights to work.");
-                Console.WriteLine("0 Return to the Main Menu.");
-                Console.WriteLine("");
-
-                Console.Write("Your choice: ");
-                int userInput = Input.ReadIntegerConsole();
-                bool closeApp = false;
 
                 switch (userInput)
                 {
-                    case 1:
-                        DisplaySchedule(1);
-                        loopContinue = true;
-                        closeApp = false;
-                        break;
-                    case 2:
-                        DisplaySchedule(2);
-                        loopContinue = true;
-                        closeApp = false;
-                        break;
-                    case 0:
-                        loopContinue = false;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid input");
-                        break;
+                        case 1:
+                            DisplaySchedule(1);
+                            break;
+                        case 2:
+                            DisplaySchedule(2);
+                            break;
+                        case 0:
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option. Choose between 0 and 2");
+                            break;
                 }
-                if (loopContinue)
-                {
-                    if (closeApp != false)
-                    {
-                        Console.WriteLine("Invalid input");
-                    }
-
-                }
-            }
+            } while (userInput != 0);
         }
+
 
         private void DisplaySchedule(int type){
 

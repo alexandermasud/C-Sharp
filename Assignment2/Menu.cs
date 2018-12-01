@@ -25,62 +25,45 @@ namespace Assignment2
         {
             // Användaren matar in siffra för att välja vilken funktion som ska köras
 
-            bool loopContinue = true;
-            while (loopContinue)
+            int userInput = 0;
+            do
             {
+
 
                 PrintMenu();
 
-            Console.Write("Your choice: ");
-            int userInput = Input.ReadIntegerConsole();
+                Console.Write("Your choice: ");
+                userInput = Input.ReadIntegerConsole();
 
-            bool closeApp = false;
+
+
 
                 switch (userInput)
                 {
                     case 1:
                         new WholeNumbersForAdd();
-                        loopContinue = true;
-                        closeApp = false;
                         break;
                     case 2:
                         new FloatingPointsNumberWhileAdd();
-                        loopContinue = true;
-                        closeApp = false;
                         break;
                     case 3:
                         new CurrencyConverter();
-                        loopContinue = true;
-                        closeApp = false;
                         break;
                     case 4:
                         new WorkingSchedule();
-                        loopContinue = true;
-                        closeApp = false;
                         break;
                     case 5:
                         new TemperatureTable();
-                        loopContinue = true;
-                        closeApp = false;
                         break;
                     case 0:
-                        loopContinue = false;
-                        System.Environment.Exit(1);
                         break;
-
                     default:
-                        closeApp = true;
+                        Console.WriteLine("Invalid option. Choose between 0 and 5");
                         break;
 
                 }
-                if (loopContinue)
-                {
-                    if(closeApp != false){
-                        Console.WriteLine("Invalid input");
-                    }
-
-                }
-            }
+            } while (userInput != 0) ;
+            
         }
     }
 }
