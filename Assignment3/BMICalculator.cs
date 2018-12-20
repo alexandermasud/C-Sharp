@@ -45,14 +45,12 @@
         public void SetUnit(UnitTypes value)
         {
             unit = value;
-
         }
 
         // Gets unitType
         public UnitTypes GetUnit()
         {
             return unit;
-
         }
 
         // Calculates BMI
@@ -73,58 +71,43 @@
             bmiValue = factor * weight / (height * height);
         }
 
+        // Gets BMI
         public double GetBMI() {
             
             return bmiValue;
         }
 
+        // Calculates BMI Category
         public void CalculateBMICategory() {
             if (bmiValue > 40)
             {
-
                 bmiCategory = "Class 3 Obesity";
-
             }
-
             else if (bmiValue >= 35)
-
             {
-
                 bmiCategory = "Class 2 Obesity";
-
             }
-
             else if (bmiValue >= 30)
             {
-
                 bmiCategory = "Class 1 Obesity";
-
             }
-        
             else if (bmiValue >= 25)
             {
-
                 bmiCategory = "Overweight";
             }
-
             else if (bmiValue >= 18.5)
             {
-
                 bmiCategory = "Normal";
-
             }
-
             else
             {
-
                 bmiCategory = "Underweight";
-
             }
         }
 
+        // Gets BMI category
         public string GetBMICategory()
         {
-
             return bmiCategory;
         }
     }
