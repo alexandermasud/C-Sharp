@@ -7,6 +7,8 @@
         private double height = 0;
         private double weight = 0;
         private UnitTypes unit;
+        private double bmiValue = 0.0;
+        private string bmiCategory = "";
 
         // Gets instance name
         public string GetName()
@@ -54,9 +56,9 @@
         }
 
         // Calculates BMI
-        public double CalculateBMI()
+        public void CalculateBMI()
         {
-            double bmiValue = 0.0;
+            
             double factor = 0.0;
 
             if (unit == UnitTypes.American)
@@ -69,8 +71,61 @@
             }
 
             bmiValue = factor * weight / (height * height);
+        }
 
+        public double GetBMI() {
+            
             return bmiValue;
+        }
+
+        public void CalculateBMICategory() {
+            if (bmiValue > 40)
+            {
+
+                bmiCategory = "Class 3 Obesity";
+
+            }
+
+            else if (bmiValue >= 35)
+
+            {
+
+                bmiCategory = "Class 2 Obesity";
+
+            }
+
+            else if (bmiValue >= 30)
+            {
+
+                bmiCategory = "Class 1 Obesity";
+
+            }
+        
+            else if (bmiValue >= 25)
+            {
+
+                bmiCategory = "Overweight";
+            }
+
+            else if (bmiValue >= 18.5)
+            {
+
+                bmiCategory = "Normal";
+
+            }
+
+            else
+            {
+
+                bmiCategory = "Underweight";
+
+            }
+        }
+
+        public string GetBMICategory()
+        {
+
+            return bmiCategory;
         }
     }
 }
